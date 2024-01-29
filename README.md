@@ -19,7 +19,8 @@
 Pouco do .MD é render como HTML
 
 ---
-
+O erase tem uma linguagem propria pra... tratar alguns flow.
+o Draw.io usa de SVG, XML, HTML pra constituir os desenhos!
 
 
 
