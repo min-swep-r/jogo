@@ -10,13 +10,13 @@
 - [ ] codar!
 ---
 
-![Figure 1](/.eraser/PEQQ91QNfUeVDsmeXmHm___ibsr7NFOmZXGn92bwac608CiSpo2___---figure---tLvRtKc9o2rsw8cVvzQ1Q---figure---EoJEKHR0pPdZ5BhRRCUEiQ.png "Figure 1")
+![Figure 1](/.eraser/PEQQ91QNfUeVDsmeXmHm___ibsr7NFOmZXGn92bwac608CiSpo2___---figure---JBUdtqXuc1CwpF0OGt7qr---figure---EoJEKHR0pPdZ5BhRRCUEiQ.png "Figure 1")
 
 > *Com o insert + [﻿app.eraser.io](https://app.eraser.io/) LINK, consigo por a img, ir editando e ela vai atualizando*
 
 <!--não esquecer de espandir a figura-->
 
-
+Pouco do .MD é render como HTML
 
 ---
 
