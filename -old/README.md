@@ -27,7 +27,8 @@ Pouco do .MD é render como HTML
 
 <a src="https://www.youtube.com/watch?v=hS_6ek9rTco">Error: JavaFX runtime components are missing, and are required to run this application</a>
 
-[YouTube Video - hS_6ek9rTco](https://www.youtube.com/watch?v=hS_6ek9rTco)> Caso precise criar uma nova rega, crie como "aplication".
+[YouTube Video - hS_6ek9rTco](https://www.youtube.com/watch?v=hS_6ek9rTco)
+    > Caso precise criar uma nova rega, crie como "aplication".
 
 
 
