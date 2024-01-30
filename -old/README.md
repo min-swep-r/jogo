@@ -27,7 +27,8 @@ java package javafx.application does not exist intellij
 
 Error: JavaFX runtime components are missing, and are required to run this application
 
-[﻿YouTube Video - hS_6ek9rTco](https://www.youtube.com/watch?v=hS_6ek9rTco)> Caso precise criar uma nova rega, crie como "aplication".
+[﻿YouTube Video - hS_6ek9rTco](https://www.youtube.com/watch?v=hS_6ek9rTco)
+  > Caso precise criar uma nova rega, crie como "aplication".
 
 ---
 
