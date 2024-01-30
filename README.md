@@ -4,13 +4,13 @@
 >   vou tenar clonar e instalar o material da GUI pra então, só me procupar com o código.  
 
 - [x] clonar
-- [ ] instalr material da gui
-    - [ ] JavaFX (OpenJFX)
+- [x] instalr material da gui
+    - [x] JavaFX (OpenJFX)
 - [ ] tirar (e começar no console, como no roteiro)
 - [ ] codar!
 ---
 
-![Figure 1](/.eraser/PEQQ91QNfUeVDsmeXmHm___ibsr7NFOmZXGn92bwac608CiSpo2___---figure---JBUdtqXuc1CwpF0OGt7qr---figure---EoJEKHR0pPdZ5BhRRCUEiQ.png "Figure 1")
+![Figure 1](/.eraser/PEQQ91QNfUeVDsmeXmHm___ibsr7NFOmZXGn92bwac608CiSpo2___---figure---l5-NFsQNvFjKgPkEZHUyh---figure---EoJEKHR0pPdZ5BhRRCUEiQ.png "Figure 1")
 
 > *Com o insert + [﻿app.eraser.io](https://app.eraser.io/) LINK, consigo por a img, ir editando e ela vai atualizando*
 
@@ -19,8 +19,20 @@
 Pouco do .MD é render como HTML
 
 ---
-O erase tem uma linguagem propria pra... tratar alguns flow.
-o Draw.io usa de SVG, XML, HTML pra constituir os desenhos!
+
+## Problemas recorrentes:
+<a src="https://www.youtube.com/watch?v=b60Fl2WLaQY">java package javafx.application does not exist intellij</a>
+
+[YouTube Video - b60Fl2WLaQY](https://www.youtube.com/watch?v=b60Fl2WLaQY)
+
+<a src="https://www.youtube.com/watch?v=hS_6ek9rTco">Error: JavaFX runtime components are missing, and are required to run this application</a>
+
+[YouTube Video - hS_6ek9rTco](https://www.youtube.com/watch?v=hS_6ek9rTco)> Caso precise criar uma nova rega, crie como "aplication".
+
+
+
+---
+
 
 
 
