@@ -6,11 +6,11 @@
 - [x] clonar
 - [x] instalr material da gui
     - [x] JavaFX (OpenJFX)
-- [x] tirar (e começar no console, como no roteiro)
+- [ ] tirar (e começar no console, como no roteiro)
 - [ ] codar!
 ---
 
-![Figure 1](/.eraser/PEQQ91QNfUeVDsmeXmHm___ibsr7NFOmZXGn92bwac608CiSpo2___---figure---6JaNrQInv4yUz54IR9vXb---figure---EoJEKHR0pPdZ5BhRRCUEiQ.png "Figure 1")
+![Figure 1](/.eraser/PEQQ91QNfUeVDsmeXmHm___ibsr7NFOmZXGn92bwac608CiSpo2___---figure---HQ1pe0f4qvXP-GPAz4Ctm---figure---EoJEKHR0pPdZ5BhRRCUEiQ.png "Figure 1")
 
 
 
