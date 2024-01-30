@@ -6,30 +6,28 @@
 - [x] clonar
 - [x] instalr material da gui
     - [x] JavaFX (OpenJFX)
-- [ ] tirar (e começar no console, como no roteiro)
+- [x] tirar (e começar no console, como no roteiro)
 - [ ] codar!
 ---
 
-![Figure 1](/.eraser/PEQQ91QNfUeVDsmeXmHm___ibsr7NFOmZXGn92bwac608CiSpo2___---figure---l5-NFsQNvFjKgPkEZHUyh---figure---EoJEKHR0pPdZ5BhRRCUEiQ.png "Figure 1")
+![Figure 1](/.eraser/PEQQ91QNfUeVDsmeXmHm___ibsr7NFOmZXGn92bwac608CiSpo2___---figure---6JaNrQInv4yUz54IR9vXb---figure---EoJEKHR0pPdZ5BhRRCUEiQ.png "Figure 1")
 
-> *Com o insert + [﻿app.eraser.io](https://app.eraser.io/) LINK, consigo por a img, ir editando e ela vai atualizando*
 
-<!--não esquecer de espandir a figura-->
+
+>  _Com o insert + _[﻿app.eraser.io](https://app.eraser.io/)_ LINK, consigo por a img, ir editando e ela vai atualizando_ 
 
 Pouco do .MD é render como HTML
 
 ---
 
 ## Problemas recorrentes:
-<a src="https://www.youtube.com/watch?v=b60Fl2WLaQY">java package javafx.application does not exist intellij</a>
+java package javafx.application does not exist intellij
 
-[YouTube Video - b60Fl2WLaQY](https://www.youtube.com/watch?v=b60Fl2WLaQY)
+[﻿YouTube Video - b60Fl2WLaQY](https://www.youtube.com/watch?v=b60Fl2WLaQY) 
 
-<a src="https://www.youtube.com/watch?v=hS_6ek9rTco">Error: JavaFX runtime components are missing, and are required to run this application</a>
+Error: JavaFX runtime components are missing, and are required to run this application
 
-[YouTube Video - hS_6ek9rTco](https://www.youtube.com/watch?v=hS_6ek9rTco)> Caso precise criar uma nova rega, crie como "aplication".
-
-
+[﻿YouTube Video - hS_6ek9rTco](https://www.youtube.com/watch?v=hS_6ek9rTco)> Caso precise criar uma nova rega, crie como "aplication".
 
 ---
 
