@@ -7,7 +7,7 @@ Roteiro: [﻿AQUI!!!](https://drive.google.com/file/d/1JilxkVmk3AX6HuuT0fsHob_Fm
 ---
 
 ## Diagrama de classes, representando
-![Figure 1](/.eraser/eBwPst8QmxllTjqJEaFD___ibsr7NFOmZXGn92bwac608CiSpo2___---figure---7PjoKZFDTfjZParPgPyP4---figure---x6unebMDUbX_A9iBRd3dxQ.png "Figure 1")
+![Figure 1](/.eraser/eBwPst8QmxllTjqJEaFD___ibsr7NFOmZXGn92bwac608CiSpo2___---figure---xpMHEPOzlWoIPuOuf2xw5---figure---x6unebMDUbX_A9iBRd3dxQ.png "Figure 1")
 
 
 
