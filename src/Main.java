@@ -11,7 +11,6 @@ public class Main {
         Menu aliasMn = new Menu(0); // Passe um valor inicial para iteraDoObj. o intelliJ já diz qual é o input
         aliasMn.options(); // Chama o método options da instância da classe Menu
 
-
     }
 }
 
