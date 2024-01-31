@@ -1,0 +1,74 @@
+title Class Diagram do Jogo
+
+Main [icon: home; color: red] {
+  main(); void - //Inicia o jogo
+}
+
+Jogo [icon: user, color: blue] {
+  table: Tabuleiro +
+  tamX: int +
+  tamY: int +
+  
+  iniciaJogo();
+  verificaJogo();
+  revelaCel();
+  marcaCel();
+}
+
+Tabuleiro {
+  minas: Celula[][] + // Uma Matriz da classe (struct heterogenea)
+  tempo: int +
+}
+
+Celula  {
+  minaAqui: boolean +
+  minaRevelada: boolean +
+  minaMarcada: boolean +
+  minaAoRedor: int +
+}
+
+class [icon: file-text]{
+  atributo1 string
+  atributo2 int
+}
+
+// define methods
+class.method(atributo1, atributo2) [icon: play-circle]{
+  // method implementation
+}
+
+
+users.teams <> teams.id
+workspaces.folderId > folders.id
+workspaces.teamId > teams.id
+chat.workspaceId > workspaces.id
+invite.workspaceId > workspaces.id
+invite.inviterId > users.id
+
+
+---
+
+// Title of the diagram
+title Class Diagram
+
+// Tables
+class [icon: file-text]{
+  attribute string
+}
+
+class.method(attribute) [icon: play-circle]{
+  // method implementation
+}
+// End of tables
+
+title Class Diagram do Jogo
+
+class [icon: file-text]{
+  atributo1 string
+  atributo2 int
+}
+
+// define methods
+class.method(atributo1, atributo2) [icon: play-circle]{
+  // method implementation
+}

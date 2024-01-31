@@ -1,0 +1,49 @@
+// Title of the diagram
+title Class Diagram do Jogo
+
+Main [icon: home, color: red] {
+  main(); void "-" //Inicia o jogo
+}
+
+Jogo [icon: user, color: blue] {
+  table: Tabuleiro "+"
+  usuario: User +
+  tamX: int +
+  tamY: int +
+  
+  iniciaJogo(); "-"
+  verificaJogo(); "-"
+  revelaCel(); "-"
+  marcaCel(); "-"
+}
+
+User [icon: user]{
+  nome: String
+}
+
+Tabuleiro {
+  minas: Celula[][] + // Uma Matriz da classe (struct heterogenea)
+  tempo: int +
+  iniciaTab(); "-"
+}
+
+Celula  {
+  minaAqui: boolean +
+  minaRevelada: boolean +
+  minaMarcada: boolean +
+  minaAoRedor: int +
+}
+
+// Ligações
+Main.main(); - Jogo
+Jogo.iniciaJogo(); - Tabuleiro
+Jogo.iniciaJogo(); - User
+Tabuleiro.iniciaTab(); - Celula
+
+IExibition {}
+console {}
+GUI {}
+
+IExibition > console
+IExibition > GUI
+Jogo > IExibition
