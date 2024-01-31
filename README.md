@@ -27,9 +27,11 @@ aqui
 
 ---
 
+## Futuramente no replit!
 
+Aguarde, ainda estou implementando!
 
-
+---
 
 
 <!--- Eraser file: https://app.eraser.io/workspace/eBwPst8QmxllTjqJEaFD --->
