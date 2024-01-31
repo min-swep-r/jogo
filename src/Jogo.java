@@ -1,32 +1,33 @@
 public class Jogo {
     // Atributos
-    private Tabuleiro table;
-    private User usuario;
-    private int tamX;
-    private int tamY;
+    private Tabuleiro tableObj;
+    private User usuarioObj;
+    private int tamXObj;
+    private int tamYObj;
 
     // Construtor
-    public Jogo(Tabuleiro table, User usuario, int tamX, int tamY) {
-        this.table = table;
-        this.usuario = usuario;
-        this.tamX = tamX;
-        this.tamY = tamY;
+    public Jogo(Tabuleiro tableInput, User usuarioInput, int tamXInput, int tamYInput) {
+        this.tableObj = tableInput;
+        this.usuarioObj = usuarioInput;
+        this.tamXObj = tamXInput;
+        this.tamYObj = tamYInput;
     }
 
     // Métodos
     public void iniciaJogo() {
-        // Implementação do método
+        // Colocar o user e o...
+        System.out.println("Jogo Iniciado");
     }
 
     public void verificaJogo() {
-        // Implementação do método
+        System.out.println("Verificado");
     }
 
     public void revelaCel() {
-        // Implementação do método
+        // Impl
     }
 
     public void marcaCel() {
-        // Implementação do método
+        // Impl
     }
 }
