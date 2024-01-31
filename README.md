@@ -11,7 +11,7 @@ aqui
 ---
 
 ## Diagrama de classes, representando
-![Figure 1](/.eraser/eBwPst8QmxllTjqJEaFD___ibsr7NFOmZXGn92bwac608CiSpo2___---figure---q2tbJTIoSDNDqmdDNUSW9---figure---x6unebMDUbX_A9iBRd3dxQ.png "Figure 1")
+![Figure 1](/.eraser/eBwPst8QmxllTjqJEaFD___ibsr7NFOmZXGn92bwac608CiSpo2___---figure---wv09e_dAE-tB41R4X_21N---figure---x6unebMDUbX_A9iBRd3dxQ.png "Figure 1")
 
 
 
