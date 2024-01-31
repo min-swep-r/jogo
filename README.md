@@ -7,7 +7,7 @@ Roteiro: [﻿AQUI!!!](https://drive.google.com/file/d/1JilxkVmk3AX6HuuT0fsHob_Fm
 ---
 
 ## Diagrama de classes, representando
-![Figure 1](/.eraser/eBwPst8QmxllTjqJEaFD___ibsr7NFOmZXGn92bwac608CiSpo2___---figure---8P-Bl6TmlXfwSXjIh_ewx---figure---x6unebMDUbX_A9iBRd3dxQ.png "Figure 1")
+![Figure 1](/.eraser/eBwPst8QmxllTjqJEaFD___ibsr7NFOmZXGn92bwac608CiSpo2___---figure---HaS1hOMCz2T9NZUW0jE7y---figure---x6unebMDUbX_A9iBRd3dxQ.png "Figure 1")
 
 
 
@@ -26,13 +26,9 @@ Roteiro: [﻿AQUI!!!](https://drive.google.com/file/d/1JilxkVmk3AX6HuuT0fsHob_Fm
 ## Futuramente no Replit!
 Aguarde, ainda estou implementando!
 
-
-
 ---
 
-
-
-# Referencias 
+# Referencias
 [1.] [﻿viniciusdenovaes.github.io/aulas/unip/20211/lpoo.html](https://viniciusdenovaes.github.io/aulas/unip/20211/lpoo.html) 
 
 ---
