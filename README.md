@@ -7,7 +7,7 @@ Roteiro: [﻿AQUI!!!](https://drive.google.com/file/d/1JilxkVmk3AX6HuuT0fsHob_Fm
 ---
 
 ## Diagrama de classes, representando
-![Figure 1](/.eraser/eBwPst8QmxllTjqJEaFD___ibsr7NFOmZXGn92bwac608CiSpo2___---figure---glNta24p5QXTNurspR_XQ---figure---x6unebMDUbX_A9iBRd3dxQ.png "Figure 1")
+![Figure 1](/.eraser/eBwPst8QmxllTjqJEaFD___ibsr7NFOmZXGn92bwac608CiSpo2___---figure---yP7_JqKCCpG3llnxvJQ23---figure---x6unebMDUbX_A9iBRd3dxQ.png "Figure 1")
 
 
 
@@ -20,6 +20,20 @@ Roteiro: [﻿AQUI!!!](https://drive.google.com/file/d/1JilxkVmk3AX6HuuT0fsHob_Fm
 [﻿Error: JavaFX runtime components are missing, and are required to run this application](https://www.youtube.com/watch?v=hS_6ek9rTco) 
 
 >   Caso precise criar uma nova rega, crie como "aplication".  
+
+---
+
+### No script de Compilação/ Execução:
+caso o rodar.bat não dê certo (erro no wsl), execute:
+
+```
+cd src
+javac --module-path ..\javafx-sdk-21.0.2\lib --add-modules javafx.controls,javafx.fxml Main.java
+java --module-path ..\javafx-sdk-21.0.2\lib --add-modules javafx.controls,javafx.fxml Main
+```
+cheque a versão do java no prompt `java -version` && baixe + substitua o OpenJFX (versão SDK) na pasta raiz do repositório. 
+
+>  Preste atenção na versão do OpenJFX 
 
 ---
 
