@@ -9,6 +9,8 @@ Ex: public void setColuna(int coluna) { if(coluna >= 0 && coluna < 7) {this.colu
 - [x] Projeto: identifique os demais métodos nas diferentes classes criadas. 
 - [x] Projeto: Crie um diagrama de classe que inclua todas as classes, atributos e métodos identificados. 
 - [x] Projeto: Implemente o código do diagrama criado que represente o clique do usuário numa célula.
+Vou dar uma implementada no I/O, para ficar melhor exibido. 
+
 ---
 
 ### CHECKPOINT 2 –
