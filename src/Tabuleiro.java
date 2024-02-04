@@ -24,19 +24,26 @@ public class Tabuleiro {
     // Método para lidar com o clique do usuário em uma célula
 
     public boolean getMina(int linha, int coluna){
-        return minas[linha][coluna].minaAqui;
+        return minas[linha][coluna].getRevelado();
     }
 
-    public void clicarCelula(int linha, int coluna) {
-        Celula celulaClicada = minas[linha][coluna];
-
-        // Verificar se a célula já foi revelada ou marcada
-        if (!celulaClicada.getRevelado()) {
-            // Lógica para revelar a célula ou marcar
-            celulaClicada.revelarCelula(); // Método que você precisará implementar na classe Celula
-        } else {
-            System.out.println("Célula já revelada ou marcada. Escolha outra célula.");
-        }
+    public boolean setMina(int linha, int coluna) {
+        Celula substituta = minas[linha][coluna];
+        substituta.mudarCelula(); // Chama a função setMina na Celula
+        return true; // Retorna true para indicar que a operação foi bem-sucedida
     }
+
+
+//    public void clicarCelula(int linha, int coluna) {
+//        Celula celulaClicada = minas[linha][coluna];
+//
+//        // Verificar se a célula já foi revelada ou marcada
+//        if (!celulaClicada.getRevelado()) {
+//            // Lógica para revelar a célula ou marcar
+//            celulaClicada.revelarCelula(); // Método que você precisará implementar na classe Celula
+//        } else {
+//            System.out.println("Célula já revelada ou marcada. Escolha outra célula.");
+//        }
+//    }
 
 }

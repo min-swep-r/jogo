@@ -20,15 +20,9 @@ public class Celula {
     public boolean getRevelado(){
         return minaRevelada;
     }
-    public void revelarCelula() {
-        minaRevelada = true;
-        // Lógica para o que acontece ao revelar a célula
+    public boolean mudarCelula() {
+        this.minaRevelada = true;
+        return minaRevelada;
     }
 
-//    public boolean getMina(){
-//        return minaAqui;
-//    }
-    public void setMina() {
-        minaAqui = true;
-    }
 }

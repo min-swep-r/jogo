@@ -35,6 +35,8 @@ public class Promptar {
 
     //primeiro Get
     public static boolean check(char var, Jogo jg) {
+        //legenda();
+
         if (var == 'a') {
             // Lógica para a tecla 'a'
             System.out.println("Tecla 'a' pressionada. o get do user é: " + jg.usuarioObj.getNome()); //ToDo ->  + Jogo.user.getNome;
@@ -46,6 +48,7 @@ public class Promptar {
         } else if (var == 'p') {
             System.out.println("mudando celula.");
             //método de fazer celula virar mina
+            colocaMina(jg);
             return true;
         } else if (var == 'o') {
             System.out.println("exibindo célula.");
@@ -60,6 +63,8 @@ public class Promptar {
     }
 
     //Blz, acho que sei como dar um get. vamos tentar...
+
+    // Método para verificar se existe uma célula nas coordenadas fornecidas
     public static boolean checkCoord(Jogo jg) {
         System.out.print("Digite a linha: ");
 
@@ -69,7 +74,7 @@ public class Promptar {
         int coluna = scanner.nextInt();
 
         // Acessa a célula específica
-        boolean temMina = false;
+        boolean temMina; //boolean temMina = false;
         try {
             temMina = jg.tableObj.getMina(linha, coluna); //Jogo.tableDojog.minaDaTable(coordYAltura, CoordXColuna)
         } catch (NullPointerException e) {
@@ -89,7 +94,42 @@ public class Promptar {
 
     }
 
+    public static boolean colocaMina(Jogo jg) {
+        System.out.print("Digite a linha: ");
 
-    // Método para verificar se existe uma célula nas coordenadas fornecidas
+        Scanner scanner = new Scanner(System.in);
+        int linha = scanner.nextInt();
+        System.out.print("Digite a coluna: ");
+        int coluna = scanner.nextInt();
+
+        // Acessa a célula específica
+        boolean temMina = false;
+        try {
+            temMina = jg.tableObj.setMina(linha, coluna); //Jogo.tableDojog.minaDaTable(coordYAltura, CoordXColuna)
+        } catch (NullPointerException e) {
+            System.out.println("Tá null");
+            scanner.close();
+            return true;
+        }
+
+        // Exibe se há uma mina na célula
+        if (temMina) {
+            System.out.println("Tem mina");
+            return true;
+        } else {
+            System.out.println("Not have");
+            return true;
+        }
+
+    }
+
+    public static void legenda(){
+        System.out.println("a - get User");
+        System.out.println("p - set mina - troca estado da celula (ativa / desativa)");
+        System.out.println("o - get mina");
+        System.out.println("s - sair");
+    }
+
+
 
 }

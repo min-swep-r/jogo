@@ -20,7 +20,7 @@ public class Jogo {
         // Colocar o user e o...
         Promptar.cls();
         System.out.println("Jogo Iniciado!!!");
-
+        Promptar.legenda();
         boolean bound = true;
         //Loop do game
         while (bound) {
