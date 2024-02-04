@@ -26,7 +26,7 @@ public class Jogo {
         while (bound) {
             Scanner scr = new Scanner(System.in);
             char var = scr.next().charAt(0);
-            bound = Promptar.check(var, jg);
+            bound = Promptar.check(var, jg); //na option que dá false, o loop termina, volta mas nem inicia
         }
 
     }
