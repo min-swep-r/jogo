@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Jogo {
     // Atributos
-    private Tabuleiro tableObj;
+    public Tabuleiro tableObj;
     public User usuarioObj;
     private int tamXObj;
     private int tamYObj;

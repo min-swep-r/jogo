@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Promptar {
 
     public static void main(String[] args) {
@@ -41,6 +43,15 @@ public class Promptar {
         } else if (var == 's') {
             System.out.println("saindo.");
             return false;
+        } else if (var == 'p') {
+            System.out.println("mudando celula.");
+            //método de fazer celula virar mina
+            return true;
+        } else if (var == 'o') {
+            System.out.println("exibindo célula.");
+            //método de exibir
+            checkCoord(jg);
+            return true;
         } else {
             // Lógica para outras teclas, se necessário
             System.out.println("Tecla não reconhecida.");
@@ -49,6 +60,36 @@ public class Promptar {
     }
 
     //Blz, acho que sei como dar um get. vamos tentar...
+    public static boolean checkCoord(Jogo jg) {
+        System.out.print("Digite a linha: ");
 
+        Scanner scanner = new Scanner(System.in);
+        int linha = scanner.nextInt();
+        System.out.print("Digite a coluna: ");
+        int coluna = scanner.nextInt();
+
+        // Acessa a célula específica
+        boolean temMina = false;
+        try {
+            temMina = jg.tableObj.getMina(linha, coluna); //Jogo.tableDojog.minaDaTable(coordYAltura, CoordXColuna)
+        } catch (NullPointerException e) {
+            System.out.println("Tá null");
+            scanner.close();
+            return true;
+        }
+
+        // Exibe se há uma mina na célula
+        if (temMina) {
+            System.out.println("Tem mina");
+            return true;
+        } else {
+            System.out.println("Not have");
+            return true;
+        }
+
+    }
+
+
+    // Método para verificar se existe uma célula nas coordenadas fornecidas
 
 }

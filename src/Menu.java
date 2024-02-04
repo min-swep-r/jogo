@@ -35,22 +35,17 @@ public class Menu {
                 if (this.stateDificuldade == 1) {
                     int tamMatrix = 5;
 
-                    //Instancias, pra poder get/set
-                    User player = new User("Default facil");
-                    Tabuleiro campo = new Tabuleiro(new Celula[tamMatrix][tamMatrix], 0);
-                    Jogo jg = new Jogo(campo, player, tamMatrix, tamMatrix);
+                    // Instâncias, pra poder get/set
+                    Jogo jg = new Jogo(new Tabuleiro(tamMatrix, tamMatrix), new User(this.stateDificuldade == 1 ? "Default Facil" : "Default Dificil"), tamMatrix, tamMatrix);
                     jg.iniciaJogo(jg);
-
                 } else if (this.stateDificuldade == 2) {
                     int tamMatrix = 7;
 
-                    //instâncias
-                    User player = new User("Default Dificil");
-                    Tabuleiro campo = new Tabuleiro(new Celula[tamMatrix][tamMatrix], 0);
-                    Jogo jg = new Jogo(campo, player, tamMatrix, tamMatrix);
-
+                    // Instâncias
+                    Jogo jg = new Jogo(new Tabuleiro(tamMatrix, tamMatrix), new User(this.stateDificuldade == 1 ? "Default Facil" : "Default Dificil"), tamMatrix, tamMatrix);
                     jg.iniciaJogo(jg);
                 }
+
 
                 break;
             case 2:
