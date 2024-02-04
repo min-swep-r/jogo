@@ -32,14 +32,19 @@ public class Promptar {
     //Novas ultilidades, vou colocar os I/O do console aqui...
 
     //primeiro Get
-    public static void check(char var, Jogo jg) {
+    public static boolean check(char var, Jogo jg) {
         if (var == 'a') {
             // Lógica para a tecla 'a'
             System.out.println("Tecla 'a' pressionada. o get do user é: " + jg.usuarioObj.getNome()); //ToDo ->  + Jogo.user.getNome;
             //System.out.println(jg.User.getNome); //quero usar o get aqui
+            return true;
+        } else if (var == 's') {
+            System.out.println("saindo.");
+            return false;
         } else {
             // Lógica para outras teclas, se necessário
             System.out.println("Tecla não reconhecida.");
+            return true;
         }
     }
 
