@@ -7,7 +7,7 @@ Roteiro: [﻿AQUI!!!](https://drive.google.com/file/d/1JilxkVmk3AX6HuuT0fsHob_Fm
 ---
 
 ## Diagrama de classes, representando
-![Figure 1](/.eraser/eBwPst8QmxllTjqJEaFD___ibsr7NFOmZXGn92bwac608CiSpo2___---figure---yP7_JqKCCpG3llnxvJQ23---figure---x6unebMDUbX_A9iBRd3dxQ.png "Figure 1")
+![Figure 1](/.eraser/eBwPst8QmxllTjqJEaFD___ibsr7NFOmZXGn92bwac608CiSpo2___---figure---wbUYc90CvVw4E7gZD9_AX---figure---x6unebMDUbX_A9iBRd3dxQ.png "Figure 1")
 
 
 
@@ -33,7 +33,7 @@ java --module-path ..\javafx-sdk-21.0.2\lib --add-modules javafx.controls,javafx
 ```
 cheque a versão do java no prompt `java -version` && baixe + substitua o OpenJFX (versão SDK) na pasta raiz do repositório. 
 
->  Preste atenção na versão do OpenJFX 
+>   Preste atenção na versão do OpenJFX  
 
 ---
 
@@ -47,7 +47,7 @@ Aguarde, ainda estou implementando!
 
 ---
 
-
+<!-- comment-->
 
 
 <!--- Eraser file: https://app.eraser.io/workspace/eBwPst8QmxllTjqJEaFD --->
