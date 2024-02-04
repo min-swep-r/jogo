@@ -19,7 +19,7 @@ public class Jogo {
     public void iniciaJogo() {
         // Colocar o user e o...
         Promptar.cls();
-        System.out.println("Jogo Iniciado");
+        System.out.println("Jogo Iniciado!!!");
 
         //Loop do game
         while (true) {
