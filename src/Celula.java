@@ -1,5 +1,5 @@
 public class Celula {
-    // Atributos
+    // Atributos da Struct heterogenea. novo typedef (em formato de classe, ainda. será manifestado como objeto)
     private boolean minaAqui;
     private boolean minaRevelada;
     private boolean minaMarcada;

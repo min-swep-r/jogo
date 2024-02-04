@@ -1,10 +1,10 @@
 public class User {
     // Atributos
-    private String nome;
+    private String nomeDoUser;
 
     // Construtor
-    public User(String nome) {
-        this.nome = nome;
+    public User(String nomeQueSeraInputado) {
+        this.nomeDoUser = nomeQueSeraInputado;
     }
 
     // Métodos, getters e setters podem ser adicionados conforme necessário
