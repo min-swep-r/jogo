@@ -7,5 +7,8 @@ public class User {
         this.nomeDoUser = nomeQueSeraInputado;
     }
 
-    // Métodos, getters e setters podem ser adicionados conforme necessário
+    // Métodos, getters e setters, para checkagem / conferencia
+    public String getNome() {
+        return nomeDoUser;
+    }
 }

@@ -32,13 +32,20 @@ public class Menu {
                 System.out.println("Jogar!");
                 //Daqui, vai ser iniciado um jogo, que terá seu user && que terá seu tabuleiro, que terá suas células
 
-                if (this.stateDificuldade == 0) {
-                    Jogo jgIzi = new Jogo(new Tabuleiro(new Celula[5][5], 0), new User("Default"), 5, 5);
-                    jgIzi.iniciaJogo();
-                } else if (this.stateDificuldade == 1) {
-                    Jogo jgDif = new Jogo(new Tabuleiro(new Celula[7][7], 0), new User("Default"), 7, 7);
-                    jgDif.iniciaJogo();
+                if (this.stateDificuldade == 1) {
+                    int tamMatrix = 5;
+
+                    // Instâncias, pra poder get/set
+                    Jogo jg = new Jogo(new Tabuleiro(tamMatrix, tamMatrix), new User(this.stateDificuldade == 1 ? "Default Facil" : "Default Dificil"), tamMatrix, tamMatrix);
+                    jg.iniciaJogo(jg);
+                } else if (this.stateDificuldade == 2) {
+                    int tamMatrix = 7;
+
+                    // Instâncias
+                    Jogo jg = new Jogo(new Tabuleiro(tamMatrix, tamMatrix), new User(this.stateDificuldade == 1 ? "Default Facil" : "Default Dificil"), tamMatrix, tamMatrix);
+                    jg.iniciaJogo(jg);
                 }
+
 
                 break;
             case 2:
@@ -72,9 +79,9 @@ public class Menu {
         // I/O
 
         System.out.println("Escolha a dificuldade:");
-        System.out.println("0. Facil");
-        System.out.println("1. Dificil");
-        System.out.println("2. Voltar");
+        System.out.println("1. Facil");
+        System.out.println("2. Dificil");
+        System.out.println("3. Voltar");
 
         System.out.print("Escolha uma option: ");
 
@@ -82,19 +89,19 @@ public class Menu {
         int escolhaDificuldade = scr.nextInt();
 
         switch (escolhaDificuldade) {
-            case 0:
-                this.stateDificuldade = 0;
+            case 1:
+                this.stateDificuldade = 1;
                 Promptar.cls();
                 System.out.println("Dificuldade definida como Fácil.");
                 options();
                 break;
-            case 1:
-                this.stateDificuldade = 1;
+            case 2:
+                this.stateDificuldade = 2;
                 Promptar.cls();
                 System.out.println("Dificuldade definida como Difícil.");
                 options();
                 break;
-            case 2:
+            case 3:
                 Promptar.cls();
                 System.out.println("Wellcome back!");
                 options();

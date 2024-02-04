@@ -1,14 +1,28 @@
 public class Celula {
     // Atributos da Struct heterogenea. novo typedef (em formato de classe, ainda. será manifestado como objeto)
-    private boolean minaAqui;
+    public boolean minaAqui;
     private boolean minaRevelada;
     private boolean minaMarcada;
     private int minaAoRedor;
 
     // Construtor
     public Celula() {
-        // Inicialização dos atributos, se necessário
+        this.minaAqui = false;
+        this.minaRevelada = false;
+        this.minaMarcada = false;
+        this.minaAoRedor = 0;
     }
 
     // Métodos, getters e setters podem ser adicionados conforme necessário
+
+    // Método para revelar a célula
+
+    public boolean getRevelado(){
+        return minaRevelada;
+    }
+    public boolean mudarCelula() {
+        this.minaRevelada = true;
+        return minaRevelada;
+    }
+
 }

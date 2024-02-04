@@ -1,7 +1,9 @@
+import java.util.Scanner;
+
 public class Jogo {
     // Atributos
-    private Tabuleiro tableObj;
-    private User usuarioObj;
+    public Tabuleiro tableObj;
+    public User usuarioObj;
     private int tamXObj;
     private int tamYObj;
 
@@ -14,10 +16,19 @@ public class Jogo {
     }
 
     // Métodos
-    public void iniciaJogo() {
+    public void iniciaJogo(Jogo jg) {
         // Colocar o user e o...
         Promptar.cls();
-        System.out.println("Jogo Iniciado");
+        System.out.println("Jogo Iniciado!!!");
+        Promptar.legenda();
+        boolean bound = true;
+        //Loop do game
+        while (bound) {
+            Scanner scr = new Scanner(System.in);
+            char var = scr.next().charAt(0);
+            bound = Promptar.check(var, jg); //na option que dá false, o loop termina, volta mas nem inicia
+        }
+
     }
 
     public void verificaJogo() {
@@ -31,4 +42,5 @@ public class Jogo {
     public void marcaCel() {
         // Impl
     }
+
 }
