@@ -32,6 +32,14 @@ public class Menu {
                 System.out.println("Jogar!");
                 //Daqui, vai ser iniciado um jogo, que terá seu user && que terá seu tabuleiro, que terá suas células
 
+                if (this.stateDificuldade == 0) {
+                    Jogo jgIzi = new Jogo(new Tabuleiro(new Celula[5][5], 0), new User("Default"), 5, 5);
+                    jgIzi.iniciaJogo();
+                } else if (this.stateDificuldade == 1) {
+                    Jogo jgDif = new Jogo(new Tabuleiro(new Celula[7][7], 0), new User("Default"), 7, 7);
+                    jgDif.iniciaJogo();
+                }
+
                 break;
             case 2:
                 Promptar.cls();
@@ -64,9 +72,11 @@ public class Menu {
         // I/O
 
         System.out.println("Escolha a dificuldade:");
-        System.out.println("0. Fácil");
-        System.out.println("1. Difícil");
-        System.out.print("Digite 0 ou 1: ");
+        System.out.println("0. Facil");
+        System.out.println("1. Dificil");
+        System.out.println("2. Voltar");
+
+        System.out.print("Escolha uma option: ");
 
         Scanner scr = new Scanner(System.in);
         int escolhaDificuldade = scr.nextInt();
@@ -74,12 +84,20 @@ public class Menu {
         switch (escolhaDificuldade) {
             case 0:
                 this.stateDificuldade = 0;
+                Promptar.cls();
                 System.out.println("Dificuldade definida como Fácil.");
+                options();
                 break;
             case 1:
                 this.stateDificuldade = 1;
+                Promptar.cls();
                 System.out.println("Dificuldade definida como Difícil.");
+                options();
                 break;
+            case 2:
+                Promptar.cls();
+                System.out.println("Wellcome back!");
+                options();
             default:
                 Promptar.cls();
                 System.out.println("inválido. Aqui vem o try catch do erro");

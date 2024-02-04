@@ -29,5 +29,7 @@ public class Promptar {
         System.out.flush();
     }
 
-    //Novas ultilidades vem abaixo...
+    //Novas ultilidades, vou colocar os I/O do console aqui...
+
+
 }

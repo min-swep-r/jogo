@@ -16,6 +16,7 @@ public class Jogo {
     // Métodos
     public void iniciaJogo() {
         // Colocar o user e o...
+        Promptar.cls();
         System.out.println("Jogo Iniciado");
     }
 
