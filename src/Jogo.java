@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Jogo {
     // Atributos
     private Tabuleiro tableObj;
@@ -18,6 +20,14 @@ public class Jogo {
         // Colocar o user e o...
         Promptar.cls();
         System.out.println("Jogo Iniciado");
+
+        //Loop do game
+        while (true) {
+            Scanner scr = new Scanner(System.in);
+            char var = scr.next().charAt(0);
+            Promptar.check(var);
+        }
+
     }
 
     public void verificaJogo() {
@@ -31,4 +41,5 @@ public class Jogo {
     public void marcaCel() {
         // Impl
     }
+
 }
