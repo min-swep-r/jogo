@@ -33,11 +33,23 @@ public class Menu {
                 //Daqui, vai ser iniciado um jogo, que terá seu user && que terá seu tabuleiro, que terá suas células
 
                 if (this.stateDificuldade == 1) {
-                    Jogo jgIzi = new Jogo(new Tabuleiro(new Celula[5][5], 0), new User("Default"), 5, 5);
-                    jgIzi.iniciaJogo();
+                    int tamMatrix = 5;
+
+                    //Instancias, pra poder get/set
+                    User player = new User("Default facil");
+                    Tabuleiro campo = new Tabuleiro(new Celula[tamMatrix][tamMatrix], 0);
+                    Jogo jg = new Jogo(campo, player, tamMatrix, tamMatrix);
+                    jg.iniciaJogo(jg);
+
                 } else if (this.stateDificuldade == 2) {
-                    Jogo jgDif = new Jogo(new Tabuleiro(new Celula[7][7], 0), new User("Default"), 7, 7);
-                    jgDif.iniciaJogo();
+                    int tamMatrix = 7;
+
+                    //instâncias
+                    User player = new User("Default Dificil");
+                    Tabuleiro campo = new Tabuleiro(new Celula[tamMatrix][tamMatrix], 0);
+                    Jogo jg = new Jogo(campo, player, tamMatrix, tamMatrix);
+
+                    jg.iniciaJogo(jg);
                 }
 
                 break;
