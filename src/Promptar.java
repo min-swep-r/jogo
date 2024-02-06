@@ -44,6 +44,8 @@ public class Promptar {
             return true;
         } else if (var == 's') {
             System.out.println("saindo.");
+
+            //false pra terminar o loop. no arquivo.class fica read-only o que será usado
             return false;
         } else if (var == 'p') {
             System.out.println("mudando celula.");
@@ -54,6 +56,11 @@ public class Promptar {
             System.out.println("exibindo célula.");
             //método de exibir
             checkCoord(jg);
+            return true;
+        } else if (var == 'i') {
+            System.out.println("printando celulas");
+            //método de printar
+            printMina(jg);
             return true;
         } else {
             // Lógica para outras teclas, se necessário
@@ -127,9 +134,24 @@ public class Promptar {
         System.out.println("a - get User");
         System.out.println("p - set mina - troca estado da celula (ativa / desativa)");
         System.out.println("o - get mina");
+        System.out.println("i - print mina");
         System.out.println("s - sair");
     }
 
+    public static void printMina(Jogo jg) {
+        System.out.println("Imprimindo minas reveladas:");
+
+        for (int i = 0; i < jg.getTamXObj(); i++) {
+            for (int j = 0; j < jg.getTamYObj(); j++) {
+                if (jg.tableObj.getMina(i, j) /*&& jg.tableObj.getMina(i, j).getRevelado()*/) {
+                    System.out.print("X "); // Caractere para minas reveladas
+                } else {
+                    System.out.print(". "); // Caractere para células não reveladas ou sem mina
+                }
+            }
+            System.out.println(); // Nova linha para a próxima linha do tabuleiro
+        }
+    }
 
 
 }
