@@ -32,7 +32,7 @@ public class Jogo {
     }
 
     public void verificaJogo() {
-        System.out.println("Verificado");
+        System.out.println("Verificado e acessado!");
     }
 
     public void revelaCel() {
@@ -41,6 +41,14 @@ public class Jogo {
 
     public void marcaCel() {
         // Impl
+    }
+
+    public int getTamXObj() {
+        return tamXObj;
+    }
+
+    public int getTamYObj() {
+        return tamYObj;
     }
 
 }
