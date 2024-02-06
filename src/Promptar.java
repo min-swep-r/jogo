@@ -47,19 +47,19 @@ public class Promptar {
 
             //false pra terminar o loop. no arquivo.class fica read-only o que será usado
             return false;
-        } else if (var == 'p') {
-            System.out.println("mudando celula.");
+        } else if (var == 'i') {
+            System.out.println("input - mudando celula.");
             //método de fazer celula virar mina
             colocaMina(jg);
             return true;
         } else if (var == 'o') {
-            System.out.println("exibindo célula.");
-            //método de exibir
+            System.out.println("out - printando celulas");
+            //método de printar
             checkCoord(jg);
             return true;
-        } else if (var == 'i') {
-            System.out.println("printando celulas");
-            //método de printar
+        } else if (var == 'p') {
+            System.out.println("print - exibindo célula.");
+            //método de exibir
             printMina(jg);
             return true;
         } else {
@@ -131,10 +131,10 @@ public class Promptar {
     }
 
     public static void legenda(){
-        System.out.println("a - get User");
-        System.out.println("p - set mina - troca estado da celula (ativa / desativa)");
-        System.out.println("o - get mina");
-        System.out.println("i - print mina");
+        System.out.println("ass - get assinatura User");
+        System.out.println("print - printa matriz de mina - troca estado da celula (ativa / desativa)");
+        System.out.println("out -  get mina");
+        System.out.println("input - set mina");
         System.out.println("s - sair");
     }
 
