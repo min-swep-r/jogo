@@ -44,6 +44,8 @@ public class Promptar {
             return true;
         } else if (var == 's') {
             System.out.println("saindo.");
+
+            //false pra terminar o loop. no arquivo.class fica read-only o que será usado
             return false;
         } else if (var == 'p') {
             System.out.println("mudando celula.");
