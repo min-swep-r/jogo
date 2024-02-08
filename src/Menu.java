@@ -46,6 +46,10 @@ public class Menu {
                     jg.iniciaJogo(jg);
                 }
 
+                Promptar.cls();
+                System.out.println("Jogue Novamente!");
+                options();
+
 
                 break;
             case 2:
@@ -60,10 +64,15 @@ public class Menu {
                 Ranking rk = new Ranking();
                 rk.call();
 
+                System.out.println("\nPressione Enter para voltar tecla para continuar!");
+                Scanner scn = new Scanner(System.in);
+                scn.nextLine();
+                options(); //GoTo o menu
+
                 break;
             case 4:
                 Promptar.cls();
-                System.out.println("Saindo do Game. Ateh logo!");
+                System.out.println("Saindo do Game. Ateh logo!\n");
                 System.exit(0);
                 break;
             default:
