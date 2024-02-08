@@ -18,10 +18,10 @@ public class Celula {
     // Método para revelar a célula
 
     public boolean getRevelado(){
-        return minaRevelada;
+        return minaAqui;
     }
     public boolean mudarCelula() {
-        this.minaRevelada = true;
+        this.minaAqui = true;
         return minaRevelada;
     }
 
