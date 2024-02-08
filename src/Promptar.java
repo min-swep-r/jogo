@@ -35,7 +35,9 @@ public class Promptar {
 
     //primeiro Get
     public static boolean check(char var, Jogo jg) {
-        //legenda();
+
+        // essa vem sendo a chamda principal, dentro do loop
+        //vou coloar aqui, ou antes da chamda daqui, o print da matriz
 
         if (var == 'a') {
             // Lógica para a tecla 'a'
