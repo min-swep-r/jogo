@@ -57,6 +57,8 @@ public class Menu {
             case 3:
                 Promptar.cls();
                 System.out.println("Ranking!");
+                Ranking rk = new Ranking();
+                rk.call();
 
                 break;
             case 4:
