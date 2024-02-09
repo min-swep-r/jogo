@@ -35,36 +35,44 @@ public class Promptar {
 
     //primeiro Get
     public static boolean check(char var, Jogo jg) {
-        //legenda();
+
+        // essa vem sendo a chamda principal, dentro do loop
+        //vou coloar aqui, ou antes da chamda daqui, o print da matriz
 
         if (var == 'a') {
             // Lógica para a tecla 'a'
             System.out.println("Tecla 'a' pressionada. o get do user é: " + jg.usuarioObj.getNome()); //ToDo ->  + Jogo.user.getNome;
             //System.out.println(jg.User.getNome); //quero usar o get aqui
+            pause(3.882f);
             return true;
         } else if (var == 's') {
             System.out.println("saindo.");
 
             //false pra terminar o loop. no arquivo.class fica read-only o que será usado
+            pause(1);
             return false;
-        } else if (var == 'p') {
-            System.out.println("mudando celula.");
+        } else if (var == 'i') {
+            System.out.println("input - mudando celula.");
             //método de fazer celula virar mina
             colocaMina(jg);
+            pause(1);
             return true;
         } else if (var == 'o') {
-            System.out.println("exibindo célula.");
-            //método de exibir
-            checkCoord(jg);
-            return true;
-        } else if (var == 'i') {
-            System.out.println("printando celulas");
+            System.out.println("out - printando celulas");
             //método de printar
+            checkCoord(jg);
+            pause(1);
+            return true;
+        } else if (var == 'p') {
+            System.out.println("print - exibindo célula.");
+            //método de exibir
             printMina(jg);
+            pause(1);
             return true;
         } else {
             // Lógica para outras teclas, se necessário
             System.out.println("Tecla não reconhecida.");
+            pause(1);
             return true;
         }
     }
@@ -131,11 +139,16 @@ public class Promptar {
     }
 
     public static void legenda(){
-        System.out.println("a - get User");
-        System.out.println("p - set mina - troca estado da celula (ativa / desativa)");
-        System.out.println("o - get mina");
-        System.out.println("i - print mina");
-        System.out.println("s - sair");
+        System.out.println("\n'.' = escavado, '\u25A1' = escavável, 'X' = Bomba, 'P' = Bandeira");
+        System.out.println("\n\nPara jogar");
+        System.out.println("\t marcar");
+        System.out.println("\t escavar");
+        System.out.println("\t(s)air - do game");
+        System.out.println("\n\nPara Debug");
+        System.out.println("\t(a)ss - get assinatura User");
+        System.out.println("\t(p)rint - printa matriz de mina - troca estado da celula (ativa / desativa)");
+        System.out.println("\t(o)ut -  get mina");
+        System.out.println("\t(i)nput - set mina");
     }
 
     public static void printMina(Jogo jg) {
@@ -151,6 +164,27 @@ public class Promptar {
             }
             System.out.println(); // Nova linha para a próxima linha do tabuleiro
         }
+    }
+
+    public static void pause(int seg) {
+        //solução do chat gpt pra pausar 1sec
+        int miliseg = 1000*seg;
+        long startTime = System.currentTimeMillis();
+        long elapsedTime;
+        do {
+            elapsedTime = System.currentTimeMillis() - startTime;
+        } while (elapsedTime < miliseg); // Espera até 1 segundo ter passado
+    }
+
+    ///Vou tentar dar um over aqui
+    public static void pause(double seg) {
+        //solução do chat gpt pra pausar 1sec
+        double miliseg = 1000.2 * seg;
+        long startTime = System.currentTimeMillis();
+        long elapsedTime;
+        do {
+            elapsedTime = System.currentTimeMillis() - startTime;
+        } while (elapsedTime < miliseg); // Espera até 1 segundo ter passado
     }
 
 

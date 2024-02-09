@@ -19,15 +19,19 @@ public class Jogo {
     public void iniciaJogo(Jogo jg) {
         // Colocar o user e o...
         Promptar.cls();
-        System.out.println("Jogo Iniciado!!!");
-        Promptar.legenda();
+        System.out.println("Jogo Iniciado!!! aperte um botão");
+        //Promptar.legenda(); tirei daqui e lancei no check
         boolean bound = true;
         //Loop do game
-        while (bound) {
+         do {
+             Promptar.cls();
+             Promptar.printMina(jg);
+             Promptar.legenda();
+
             Scanner scr = new Scanner(System.in);
             char var = scr.next().charAt(0);
             bound = Promptar.check(var, jg); //na option que dá false, o loop termina, volta mas nem inicia
-        }
+        }while (bound);
 
     }
 
