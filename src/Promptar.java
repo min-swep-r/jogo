@@ -139,11 +139,16 @@ public class Promptar {
     }
 
     public static void legenda(){
-        System.out.println("(a)ss - get assinatura User");
-        System.out.println("(p)rint - printa matriz de mina - troca estado da celula (ativa / desativa)");
-        System.out.println("(o)ut -  get mina");
-        System.out.println("(i)nput - set mina");
-        System.out.println("(s)air - do game");
+        System.out.println("\n'.' = escavado, '\u25A1' = escavável, 'X' = Bomba, 'P' = Bandeira");
+        System.out.println("\n\nPara jogar");
+        System.out.println("\t marcar");
+        System.out.println("\t escavar");
+        System.out.println("\t(s)air - do game");
+        System.out.println("\n\nPara Debug");
+        System.out.println("\t(a)ss - get assinatura User");
+        System.out.println("\t(p)rint - printa matriz de mina - troca estado da celula (ativa / desativa)");
+        System.out.println("\t(o)ut -  get mina");
+        System.out.println("\t(i)nput - set mina");
     }
 
     public static void printMina(Jogo jg) {

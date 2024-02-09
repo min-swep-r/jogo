@@ -34,15 +34,17 @@ public class Menu {
 
                 if (this.stateDificuldade == 1) {
                     int tamMatrix = 5;
+                    int numBombas = 5; // Número total de bombas para a dificuldade fácil
 
-                    // Instâncias, pra poder get/set
-                    Jogo jg = new Jogo(new Tabuleiro(tamMatrix, tamMatrix), new User(this.stateDificuldade == 1 ? "Default Facil" : "Default Dificil"), tamMatrix, tamMatrix);
+                    // Instâncias pra poder get/set
+                    Jogo jg = new Jogo(new Tabuleiro(tamMatrix, tamMatrix, numBombas), new User(this.stateDificuldade == 1 ? "Default Facil" : "Default Dificil"/*um ternário de 2 options, pra... definir o nome*/), tamMatrix, tamMatrix);
                     jg.iniciaJogo(jg);
                 } else if (this.stateDificuldade == 2) {
                     int tamMatrix = 7;
+                    int numBombas = 10; // Número total de bombas para a dificuldade difícil
 
-                    // Instâncias
-                    Jogo jg = new Jogo(new Tabuleiro(tamMatrix, tamMatrix), new User(this.stateDificuldade == 1 ? "Default Facil" : "Default Dificil"), tamMatrix, tamMatrix);
+                    // Instâncias, com as classes e subclasses e o novo atributo
+                    Jogo jg = new Jogo(new Tabuleiro(tamMatrix, tamMatrix, numBombas), new User(this.stateDificuldade == 1 ? "Default Facil" : "Default Dificil"), tamMatrix, tamMatrix);
                     jg.iniciaJogo(jg);
                 }
 
