@@ -66,7 +66,20 @@ public class Promptar {
         } else if (var == 'p') {
             System.out.println("print - exibindo célula.");
             //método de exibir
-            printMina(jg);
+            printMinaDebug(jg); //Função antiga, agr vou usar pa debug
+            pause(2.65);
+            return true;
+        } else if (var == 'e') {
+            System.out.println("escavando...");
+            //método de escavar
+            escava(jg);
+            pause(1);
+            return true;
+        }
+        else if (var == 'b') {
+            System.out.println("Changing bandeira");
+            //método de escavar
+            scouting(jg);
             pause(1);
             return true;
         } else {
@@ -109,9 +122,69 @@ public class Promptar {
 
     }
 
-    public static boolean colocaMina(Jogo jg) {
+    public static void escava(Jogo jg) {
         System.out.print("Digite a linha: ");
+        Scanner scanner = new Scanner(System.in);
+        int linha = scanner.nextInt();
+        System.out.print("Digite a coluna: ");
+        int coluna = scanner.nextInt();
 
+        // Acessa a célula específica e chama o método revelaCelula()
+        Celula celula = jg.tableObj.getMinaFull(linha, coluna);
+
+        //Vou criar daqui uma restrição pra não cavar a celula bandeirada
+        if (celula.getBaneira()){
+            System.out.println("Po, com bandeira nõ vale escavar!!!");
+            pause(1); //pra repensar nos atos
+        } else if (celula.celRevelado()) {
+            System.out.println("escavar dnv, boy?");
+            pause(1); //pra repensar nos atos
+        } else if (celula.getRevelado()) {//se escavar com bomba
+            System.out.println("tlgd que tu perdeu, né??????????"); //ToDo fazer algo mis dinamico, como motrar a impressão, uma splash, sla
+            pause(5.1); //pra repensar nos atos
+        } else {
+            if (celula != null) {
+                celula.revelaCelula();
+                System.out.println("Célula escavada!");
+            } else {
+                System.out.println("Erro ao acessar a célula.");
+            }
+        }
+
+
+    }
+
+    public static void scouting(Jogo jg) {
+        //--------------------------------------------obtem a célula e "clona"------
+        System.out.print("Digite a linha: ");
+        Scanner scanner = new Scanner(System.in);
+        int linha = scanner.nextInt();
+        System.out.print("Digite a coluna: ");
+        int coluna = scanner.nextInt();
+        // Acessa a célula específica e chama o método revelaCelula()
+        Celula celula = jg.tableObj.getMinaFull(linha, coluna);
+        //----------------------------------------------------------------------------
+
+        //Aqui, a msm coisa. vou colocar todo funcionamento entro de uma condicional
+        //se a celula já tiver escavada, tbm nem adianta
+        if (celula.celRevelado()) {
+            System.out.println("Oxi, pra que bandeira aqui se tu já escavou?");
+            pause(1); //pra repensar nos atos
+        } else { //aqui é o funcionamento padrão
+            if (celula != null) {
+                celula.mudaBandeira();
+                System.out.println("Terreno (des)marcado!");
+            } else {
+                System.out.println("Erro ao acessar a célula.");
+            }
+        }
+
+    }
+
+
+    public static boolean colocaMina(Jogo jg) {
+
+        System.out.print("Digite a linha: ");
         Scanner scanner = new Scanner(System.in);
         int linha = scanner.nextInt();
         System.out.print("Digite a coluna: ");
@@ -142,7 +215,8 @@ public class Promptar {
         System.out.println("\n'.' = escavado, '\u25A1' = escavável, 'X' = Bomba, 'P' = Bandeira");
         System.out.println("\n\nPara jogar");
         System.out.println("\t marcar");
-        System.out.println("\t escavar");
+        System.out.println("\t(e)scavar");
+        System.out.println("\t(b)andeiar / dedsbandeirar");
         System.out.println("\t(s)air - do game");
         System.out.println("\n\nPara Debug");
         System.out.println("\t(a)ss - get assinatura User");
@@ -150,9 +224,42 @@ public class Promptar {
         System.out.println("\t(o)ut -  get mina");
         System.out.println("\t(i)nput - set mina");
     }
-
+    // Vou começar a mexer na exibição aqui. 1º - tudo tem que ser quadrado, a não ser que eu tenha escavado
     public static void printMina(Jogo jg) {
         System.out.println("Imprimindo minas reveladas:");
+
+        // Itera sobre todas as células do tabuleiro
+        for (int i = 0; i < jg.getTamXObj(); i++) {
+            for (int j = 0; j < jg.getTamYObj(); j++) {
+                // Acessa a célula atual
+                Celula celula = jg.tableObj.getMinaFull(i, j);
+
+                // Verifica se a célula foi revelada
+
+                if (celula.getBaneira()){ //"se tiver bandeira..."
+                    System.out.print("P ");
+                } else if (celula.celRevelado()) { //"se... já tiver revelado / ESCAVADO..."
+                    //----------------------------------------------
+                    //Aninhamento de condições pois são duplas (AND)
+
+                    // Verifica se a célula contém uma mina
+                    if (celula.getRevelado()) { //"se tiver bomba"
+                        System.out.print("X "); // X se a célula contém uma mina e foi revelada
+                    } else {
+                        System.out.print(". "); // Ponto se a célula não contém uma mina e foi revelada
+                    }
+                    //----------------------------------------------
+                } else {
+                    System.out.print("\u25A1 "); // Quadrado se a célula não foi revelada
+                }
+            }
+            System.out.println(); // Nova linha para a próxima linha do tabuleiro
+        }
+    }
+
+
+    public static void printMinaDebug(Jogo jg) {
+        System.out.println("estás tapaceano?");
 
         for (int i = 0; i < jg.getTamXObj(); i++) {
             for (int j = 0; j < jg.getTamYObj(); j++) {
