@@ -159,7 +159,7 @@ public class Promptar {
                 if (jg.tableObj.getMina(i, j) /*&& jg.tableObj.getMina(i, j).getRevelado()*/) {
                     System.out.print("X "); // Caractere para minas reveladas
                 } else {
-                    System.out.print(". "); // Caractere para células não reveladas ou sem mina
+                    System.out.print("\u25A1 "); // Caractere para células não reveladas ou sem mina
                 }
             }
             System.out.println(); // Nova linha para a próxima linha do tabuleiro
