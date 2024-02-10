@@ -22,6 +22,11 @@ public class Celula {
     public boolean getRevelado(){
         return minaAqui;
     }
+    public boolean celRevelado(){
+        return minaRevelada;
+    }
+
+
     public boolean mudarCelula() {
         //coloca true, transformando a celula em mina
         this.minaAqui = true;
@@ -30,4 +35,10 @@ public class Celula {
 
     public boolean temCelula() {return isCelula;}
 
+    public boolean revelaCelula() {
+        System.out.println("Antes era: "+ this.minaRevelada);
+        this.minaRevelada = true;
+        System.out.println("agora é: "+ this.minaRevelada);
+        return minaRevelada;
+    }
 }

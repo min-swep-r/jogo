@@ -72,7 +72,7 @@ public class Promptar {
         } else if (var == 'e') {
             System.out.println("escavando...");
             //método de escavar
-            //printMina(jg);
+            escava(jg);
             pause(1);
             return true;
         } else {
@@ -115,9 +115,27 @@ public class Promptar {
 
     }
 
-    public static boolean colocaMina(Jogo jg) {
+    public static void escava(Jogo jg) {
         System.out.print("Digite a linha: ");
+        Scanner scanner = new Scanner(System.in);
+        int linha = scanner.nextInt();
+        System.out.print("Digite a coluna: ");
+        int coluna = scanner.nextInt();
 
+        // Acessa a célula específica e chama o método revelaCelula()
+        Celula celula = jg.tableObj.getMinaFull(linha, coluna);
+        if (celula != null) {
+            celula.revelaCelula();
+            System.out.println("Célula escavada!");
+        } else {
+            System.out.println("Erro ao acessar a célula.");
+        }
+    }
+
+
+    public static boolean colocaMina(Jogo jg) {
+
+        System.out.print("Digite a linha: ");
         Scanner scanner = new Scanner(System.in);
         int linha = scanner.nextInt();
         System.out.print("Digite a coluna: ");
@@ -160,22 +178,36 @@ public class Promptar {
     public static void printMina(Jogo jg) {
         System.out.println("Imprimindo minas reveladas:");
 
-        //ou seja, pra toda célula, dentro do limite...
+        // Itera sobre todas as células do tabuleiro
         for (int i = 0; i < jg.getTamXObj(); i++) {
             for (int j = 0; j < jg.getTamYObj(); j++) {
+                // Acessa a célula atual
+                Celula celula = jg.tableObj.getMinaFull(i, j);
 
-
-                //vou ter que trocar daqui. não são as celulas com mina open mas as que são somente minas
-                if (jg.tableObj.getCelula(i, j) /*&& jg.tableObj.getMina(i, j).getRevelado()*/) {
-                    System.out.print("\u25A1 "); // Caractere para minas reveladas
+                // Verifica se a célula foi revelada
+                if (celula.celRevelado()) {
+                    // Verifica se a célula contém uma mina
+                    if (celula.getRevelado()) {
+                        System.out.print("X "); // X se a célula contém uma mina e foi revelada
+                    } else {
+                        System.out.print(". "); // Ponto se a célula não contém uma mina e foi revelada
+                    }
+                } else {
+                    System.out.print("\u25A1 "); // Quadrado se a célula não foi revelada
                 }
-//                else {
-//                    System.out.print("\u25A1 "); // Caractere para células não reveladas ou sem mina
-//                }
             }
             System.out.println(); // Nova linha para a próxima linha do tabuleiro
         }
     }
+
+
+
+
+
+
+
+
+
 
     public static void printMinaDebug(Jogo jg) {
         System.out.println("estás tapaceano?");
