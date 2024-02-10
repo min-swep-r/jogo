@@ -201,14 +201,6 @@ public class Promptar {
     }
 
 
-
-
-
-
-
-
-
-
     public static void printMinaDebug(Jogo jg) {
         System.out.println("estás tapaceano?");
 
