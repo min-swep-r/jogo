@@ -36,6 +36,10 @@ public class Tabuleiro {
         return minas[linha][coluna].getRevelado();
     }
 
+    public boolean getCelula(int linha, int coluna){
+        return minas[linha][coluna].temCelula();
+    }
+
     public boolean setMina(int linha, int coluna) {
         Celula substituta = minas[linha][coluna];
         substituta.mudarCelula(); // Chama a função setMina na Celula

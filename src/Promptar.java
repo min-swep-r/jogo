@@ -69,6 +69,12 @@ public class Promptar {
             printMina(jg);
             pause(1);
             return true;
+        } else if (var == 'e') {
+            System.out.println("escavando...");
+            //método de escavar
+            //printMina(jg);
+            pause(1);
+            return true;
         } else {
             // Lógica para outras teclas, se necessário
             System.out.println("Tecla não reconhecida.");
@@ -142,7 +148,7 @@ public class Promptar {
         System.out.println("\n'.' = escavado, '\u25A1' = escavável, 'X' = Bomba, 'P' = Bandeira");
         System.out.println("\n\nPara jogar");
         System.out.println("\t marcar");
-        System.out.println("\t escavar");
+        System.out.println("\t (e)scavar");
         System.out.println("\t(s)air - do game");
         System.out.println("\n\nPara Debug");
         System.out.println("\t(a)ss - get assinatura User");
@@ -150,17 +156,22 @@ public class Promptar {
         System.out.println("\t(o)ut -  get mina");
         System.out.println("\t(i)nput - set mina");
     }
-
+    // Vou começar a mexer na exibição aqui. 1º - tudo tem que ser quadrado, a não ser que eu tenha escavado
     public static void printMina(Jogo jg) {
         System.out.println("Imprimindo minas reveladas:");
 
+        //ou seja, pra toda célula, dentro do limite...
         for (int i = 0; i < jg.getTamXObj(); i++) {
             for (int j = 0; j < jg.getTamYObj(); j++) {
-                if (jg.tableObj.getMina(i, j) /*&& jg.tableObj.getMina(i, j).getRevelado()*/) {
-                    System.out.print("X "); // Caractere para minas reveladas
-                } else {
-                    System.out.print("\u25A1 "); // Caractere para células não reveladas ou sem mina
+
+
+                //vou ter que trocar daqui. não são as celulas com mina open mas as que são somente minas
+                if (jg.tableObj.getCelula(i, j) /*&& jg.tableObj.getMina(i, j).getRevelado()*/) {
+                    System.out.print("\u25A1 "); // Caractere para minas reveladas
                 }
+//                else {
+//                    System.out.print("\u25A1 "); // Caractere para células não reveladas ou sem mina
+//                }
             }
             System.out.println(); // Nova linha para a próxima linha do tabuleiro
         }
