@@ -43,7 +43,31 @@ tudo pela lógica. é bem complicadinho, mas vamos devagar.
 
 vou repensar se continuo a jogabilidade ou se vou para... o checkpoint.
 
+1912
 
+tirando o pomodoro invertido, acho que é isso.
+
+vou concluir a parte da jogabilidade e... fazer o ranking. e... já vou ortr umas partes do checkpoint 2
+
+tipo a dabandeira
+
+1917
+
+pensei rapidamente nos casos de escavar qndo já tiver scavado, escavar qndo tiver bandeira, 
+
+bandeira in, bandeira out.
+
+1955
+
+Cafezinho salva demais. acho que stá bem mais jogavel, mas sem:
+
+1. ranking
+2. pontos
+
+
+vou seguir e coloar no trab do git
+
+---
 
 
 
