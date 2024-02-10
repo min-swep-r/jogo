@@ -18,7 +18,9 @@ Não sei se era o mais correto, mas antes de implementar a herança e o POO no j
 
 - [ ] Projeto: considerando que uma célula pode ser bomba, vizinha a bomba ou espaço vazio, expanda a classe utilizada para representar cada célula do tabuleiro utilizando o conceito de herança. 
 - [ ] Projeto: Inclua no diagrama de classes, as classes para comunicação com o usuário e que permitirão a execução do jogo. 
-- [ ] Projeto: permita que o usuário marque uma célula fechada com bandeira (candidata a ter bomba). Células marcadas com bandeira não podem ser abertas se a bandeira não for retirada antes. 
+- [x] Projeto: permita que o usuário marque uma célula fechada com bandeira (candidata a ter bomba). Células marcadas com bandeira não podem ser abertas se a bandeira não for retirada antes. 
+> acabou que aqui eu dei uma pulada, ao tentar lançar o I/O
+
 - [ ] Projeto: ao abrir uma célula que não tem bomba na vizinhança, todas suas células vizinhas devem ser abertas de maneira sucessiva. 
 - [ ] Projeto: Implemente o código do diagrama atualizado que seja necessário para que 2 usuários consigam interagir. 
 - [ ] Projeto: separe as classes do jogo em pacotes (ao menos dois) 
