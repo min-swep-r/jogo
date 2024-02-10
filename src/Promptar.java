@@ -66,7 +66,7 @@ public class Promptar {
         } else if (var == 'p') {
             System.out.println("print - exibindo célula.");
             //método de exibir
-            printMina(jg);
+            printMinaDebug(jg); //Função antiga, agr vou usar pa debug
             pause(1);
             return true;
         } else if (var == 'e') {
@@ -148,7 +148,7 @@ public class Promptar {
         System.out.println("\n'.' = escavado, '\u25A1' = escavável, 'X' = Bomba, 'P' = Bandeira");
         System.out.println("\n\nPara jogar");
         System.out.println("\t marcar");
-        System.out.println("\t (e)scavar");
+        System.out.println("\t(e)scavar");
         System.out.println("\t(s)air - do game");
         System.out.println("\n\nPara Debug");
         System.out.println("\t(a)ss - get assinatura User");
@@ -172,6 +172,21 @@ public class Promptar {
 //                else {
 //                    System.out.print("\u25A1 "); // Caractere para células não reveladas ou sem mina
 //                }
+            }
+            System.out.println(); // Nova linha para a próxima linha do tabuleiro
+        }
+    }
+
+    public static void printMinaDebug(Jogo jg) {
+        System.out.println("Imprimindo minas reveladas:");
+
+        for (int i = 0; i < jg.getTamXObj(); i++) {
+            for (int j = 0; j < jg.getTamYObj(); j++) {
+                if (jg.tableObj.getMina(i, j) /*&& jg.tableObj.getMina(i, j).getRevelado()*/) {
+                    System.out.print("X "); // Caractere para minas reveladas
+                } else {
+                    System.out.print(". "); // Caractere para células não reveladas ou sem mina
+                }
             }
             System.out.println(); // Nova linha para a próxima linha do tabuleiro
         }
