@@ -7,9 +7,19 @@ Roteiro: [﻿AQUI!!!](https://drive.google.com/file/d/1JilxkVmk3AX6HuuT0fsHob_Fm
 ---
 
 ## Diagrama de classes, representando
-![Figure 1](/.eraser/eBwPst8QmxllTjqJEaFD___ibsr7NFOmZXGn92bwac608CiSpo2___---figure---vwZ_tWMDeuN5SXjqxJ9fB---figure---x6unebMDUbX_A9iBRd3dxQ.png "Figure 1")
 
 
+### Primeiro diagrama:
+![Figure 1](/.eraser/eBwPst8QmxllTjqJEaFD___ibsr7NFOmZXGn92bwac608CiSpo2___---figure---XELuK_g5NJXz8J8t8Iccq---figure---x6unebMDUbX_A9iBRd3dxQ.png "Figure 1")
+
+
+
+
+
+### Aqui, o Segundo diagrama:
+(para o checkpoint 2, como pedido de melhoria)
+
+***colocar a fig do eraser aqui***
 
 ---
 
@@ -47,7 +57,7 @@ Aguarde, ainda estou implementando!
 
 ---
 
-<!-- comment-->
+
 
 
 <!--- Eraser file: https://app.eraser.io/workspace/eBwPst8QmxllTjqJEaFD --->
