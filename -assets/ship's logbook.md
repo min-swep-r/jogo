@@ -17,6 +17,15 @@ Vou fazer as mecânicas de...
 - [ ] exibir as distancias?
 ---
 
+bem, ele está imprimindo as celulas e segundo um criterio, 
+
+
+
+2319
+
+blz, o que consegui fazer:
+
+- o mapa todo em escavavel, vou colocar a opção de escavar.
 
 
 
