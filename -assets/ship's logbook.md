@@ -26,6 +26,17 @@ bem, ele está imprimindo as celulas e segundo um criterio,
 blz, o que consegui fazer:
 
 - o mapa todo em escavavel, vou colocar a opção de escavar.
+---
+
+## 2024-02-10
+1220
+
+fiz a fnção de debug, pra visualizar. agora tenho que me organizar pra voltar de onde parei.
+
+
+
+
+
 
 
 
