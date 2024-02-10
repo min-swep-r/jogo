@@ -31,9 +31,17 @@ blz, o que consegui fazer:
 ## 2024-02-10
 1220
 
-fiz a fnção de debug, pra visualizar. agora tenho que me organizar pra voltar de onde parei.
+fiz a função de debug, pra visualizar. agora tenho que me organizar pra voltar de onde parei.
+
+1814
+
+Caramba, é muito trabalho pra pouco tempo e...
+
+tudo pela lógica. é bem complicadinho, mas vamos devagar.
 
 
+
+vou repensar se continuo a jogabilidade ou se vou para... o checkpoint.
 
 
 
