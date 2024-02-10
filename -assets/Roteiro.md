@@ -14,7 +14,7 @@ Vou dar uma implementada no I/O, para ficar melhor exibido.
 ---
 
 ### CHECKPOINT 2 –
-Não sei se era o mais correto, mas antes de implementar a herança e o POO no jogo, resolvi deixar o jogo... Jogável!
+> Não sei se era o mais correto, mas antes de implementar a herança e o POO no jogo, resolvi deixar o jogo... Jogável!
 
 - [ ] Projeto: considerando que uma célula pode ser bomba, vizinha a bomba ou espaço vazio, expanda a classe utilizada para representar cada célula do tabuleiro utilizando o conceito de herança. 
 - [ ] Projeto: Inclua no diagrama de classes, as classes para comunicação com o usuário e que permitirão a execução do jogo. 
