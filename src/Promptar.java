@@ -67,7 +67,7 @@ public class Promptar {
             System.out.println("print - exibindo célula.");
             //método de exibir
             printMinaDebug(jg); //Função antiga, agr vou usar pa debug
-            pause(1);
+            pause(2.65);
             return true;
         } else if (var == 'e') {
             System.out.println("escavando...");
@@ -178,7 +178,7 @@ public class Promptar {
     }
 
     public static void printMinaDebug(Jogo jg) {
-        System.out.println("Imprimindo minas reveladas:");
+        System.out.println("estás tapaceano?");
 
         for (int i = 0; i < jg.getTamXObj(); i++) {
             for (int j = 0; j < jg.getTamYObj(); j++) {
