@@ -10,7 +10,7 @@ Roteiro: [﻿AQUI!!!](https://drive.google.com/file/d/1JilxkVmk3AX6HuuT0fsHob_Fm
 
 
 ### Primeiro diagrama:
-![Figure 1](/.eraser/eBwPst8QmxllTjqJEaFD___ibsr7NFOmZXGn92bwac608CiSpo2___---figure---5zXL5fxmRErx81-WRQytH---figure---x6unebMDUbX_A9iBRd3dxQ.png "Figure 1")
+![Figure 1](/.eraser/eBwPst8QmxllTjqJEaFD___ibsr7NFOmZXGn92bwac608CiSpo2___---figure---kYzF0S8nx3ta13mTFxEwk---figure---x6unebMDUbX_A9iBRd3dxQ.png "Figure 1")
 
 
 
@@ -20,6 +20,12 @@ Roteiro: [﻿AQUI!!!](https://drive.google.com/file/d/1JilxkVmk3AX6HuuT0fsHob_Fm
 (para o checkpoint 2, como pedido de melhoria)
 
 ***colocar a fig do eraser aqui***
+
+
+
+
+
+
 
 ---
 
