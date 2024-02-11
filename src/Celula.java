@@ -54,3 +54,5 @@ public class Celula {
         return minaRevelada;
     }
 }
+//Paara o ponto 1 do checkpoint 2, vou precisar, para TUDO, dizer se é de bomba, arround ou vazia.
+//onde no jogo e no promptar tiver celula, vou ter que adequar
