@@ -4,6 +4,9 @@ public class Main {
         System.out.println("Abriu"); //Onde há um " no IntelliJ é pq deu clear no Prompt/ Powershell.
         Suply.cls();
 
+        Graphics graph = new Graphics();
+        graph.openWindow();
+
         System.out.println("Bem vindo!");
         Menu aliasMn = new Menu(0, 1); // Passe um valor inicial para iteraDoObj. o intelliJ já diz qual é o input
         aliasMn.options(); // Chama o método options da instância da classe Menu
