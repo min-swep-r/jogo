@@ -1,10 +1,10 @@
 public class Celula {
     // Atributos da Struct heterogenea. novo typedef (em formato de classe, ainda. será manifestado como objeto)
-    private boolean isCelula;
-    public boolean minaAqui;
-    private boolean minaRevelada;
-    private boolean minaMarcada;
-    private int minaAoRedor;
+    private boolean isCelula; //Cel
+    public boolean minaAqui; //Bomba
+    private boolean minaRevelada; //Acho que... de todas
+    private boolean minaMarcada; //Cel
+    private int minaAoRedor; //vizinha
 
     // Construtor
     public Celula() {
@@ -21,38 +21,39 @@ public class Celula {
 
     public boolean getRevelado(){
         return minaAqui;
-    }
+    } //bomba
     public boolean celRevelado(){
         return minaRevelada;
-    }
+    } //Standard (todas)
 
     public boolean mudarCelula() {
         //coloca true, transformando a celula em mina
         this.minaAqui = true;
         return minaRevelada;
-    }
+    } //bomba
 
-    public boolean temCelula() {return isCelula;}
+    public boolean temCelula() {return isCelula;} //Standard (todas)
 
     public boolean revelaCelula() {
         System.out.println("Antes era: "+ this.minaRevelada);
         this.minaRevelada = true;
         System.out.println("agora é: "+ this.minaRevelada);
         return minaRevelada;
-    }
+    } //Standard (todas)
 
     //Para bandeira
 
     public boolean getBaneira(){
         return minaMarcada;
-    }
+    } //standard (todas)
     public boolean mudaBandeira() {
         //troca o estado
         System.out.println("antes a bandeira tava: "+ this.minaMarcada);
         if (minaMarcada){this.minaMarcada = false;} else {this.minaMarcada = true;} //this.atibuto quer dizer "atributo do objeto itself. não de outro objeto"
         System.out.println("agora a baneira é: "+ this.minaMarcada);
         return minaRevelada;
-    }
+    } //Standard (todas)
 }
 //Paara o ponto 1 do checkpoint 2, vou precisar, para TUDO, dizer se é de bomba, arround ou vazia.
 //onde no jogo e no promptar tiver celula, vou ter que adequar
+//Vamos separar! em: vizinha, bomba e vazio!!! com azio, eu acho que é standard
