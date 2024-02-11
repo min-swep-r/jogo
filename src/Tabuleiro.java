@@ -32,23 +32,30 @@ public class Tabuleiro {
 
     // Método para lidar com o clique do usuário em uma célula
 
-    public boolean getMina(int linha, int coluna){
-        return minas[linha][coluna].getRevelado();
+    public boolean getMina(int linha, int coluna) {
+        if (minas[linha][coluna] instanceof Bomba) {
+            return ((Bomba) minas[linha][coluna]).getRevelado();
+        } else {
+            return false; // ou qualquer outra coisa que faça sentido para o seu código
+        }
     }
+
 
     public boolean getCelula(int linha, int coluna){
         return minas[linha][coluna].temCelula();
     }
 
     public boolean setMina(int linha, int coluna) {
-        Celula substituta = minas[linha][coluna];
-        substituta.mudarCelula(); // Chama a função setMina na Celula
+        System.out.println("era pra debug, pra adicionar bomba. como troquei o .mudarCelula(); eu vou deixar no standby");
+//        Celula substituta = minas[linha][coluna];
+//        substituta.mudarCelula(); // Chama a função setMina na Celula
         return true; // Retorna true para indicar que a operação foi bem-sucedida
     }
 
     // acho que não precisa do get/set do num de bomba
     // Método para distribuir as bombas aleatoriamente
     private void pingaBomb() {
+        //Esse sim é importante.
         Random random = new Random();
 
         int bombasRestantes = numBombas;
@@ -56,10 +63,10 @@ public class Tabuleiro {
             //pega valores aleatorios, pro par ordenado,a partir do tamanho
             int linha = random.nextInt(minas.length);
             int coluna = random.nextInt(minas[0].length);
-
+//Vou ter que trocar aqui, criar uma forma e colocar bomba. ------------------------------------------
             // Verifica se a célula já possui uma bomba
-            if (!minas[linha][coluna].minaAqui) {
-                minas[linha][coluna].mudarCelula(); // Define a célula como uma bomba, passando pra true
+            if (!minas[linha][coluna].temCelula() /*|| minas[linha][coluna] instanceof Vizinha*/) {
+                minas[linha][coluna] = new Bomba(); // Define a célula como uma bomba // agr, dando um casting de instancia. down cast
                 bombasRestantes--;
             }
 

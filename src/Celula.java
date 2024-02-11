@@ -1,36 +1,35 @@
 public class Celula {
     // Atributos da Struct heterogenea. novo typedef (em formato de classe, ainda. será manifestado como objeto)
     private boolean isCelula; //Cel
-    public boolean minaAqui; //Bomba
+    //public boolean minaAqui; //Bomba //Jogada na sub
     private boolean minaRevelada; //Acho que... de todas
     private boolean minaMarcada; //Cel
-    private int minaAoRedor; //vizinha
 
     // Construtor
     public Celula() {
         this.isCelula = true;
-        this.minaAqui = false;
+        //this.minaAqui = false; //Jogado na sub (bomba)
         this.minaRevelada = false;
         this.minaMarcada = false;
-        this.minaAoRedor = 0;
+        //this.minaAoRedor = 0; //jogado na sub (vizinha)
     }
 
     // Métodos, getters e setters podem ser adicionados conforme necessário
 
     // Método para revelar a célula
 
-    public boolean getRevelado(){
-        return minaAqui;
-    } //bomba
+//    public boolean getRevelado(){
+//        return minaAqui;
+//    } //bomba
     public boolean celRevelado(){
         return minaRevelada;
     } //Standard (todas)
 
-    public boolean mudarCelula() {
-        //coloca true, transformando a celula em mina
-        this.minaAqui = true;
-        return minaRevelada;
-    } //bomba
+//    public boolean mudarCelula() { // li qu posso dar um override aqui, vou deixar por duvida, mas cho ue vou ter que fazer um casting de instncias, isso sim!
+//        //coloca true, transformando a celula em mina
+//        this.minaAqui = true;
+//        return minaRevelada;
+//    } //bomba
 
     public boolean temCelula() {return isCelula;} //Standard (todas)
 
