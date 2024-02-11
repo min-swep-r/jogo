@@ -84,7 +84,13 @@ vamos separar!
 
 > acho que vazio é a standard, que já está.
 
+1733
 
+Rapaz, tá dificil.
+
+1825.
+
+fiz a merda, vou tentar fazer o correto. "corrija seus erros e eles sumirão rapidamente. faça disso um hábito e não terá acumulo. se tentar oculta-los, se tornará mais doloroso e indigno".
 
 
 <!--- Eraser file: https://app.eraser.io/workspace/39N9EaMfzypA4hiNoDwB --->
