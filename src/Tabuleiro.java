@@ -33,17 +33,6 @@ public class Tabuleiro {
         System.out.println("Suas Jogadas: "+this.tempo);
     }
 
-    // Método para lidar com o clique do usuário em uma célula
-
-    public boolean getMina(int linha, int coluna) {
-        if (minas[linha][coluna] instanceof Bomba) {
-            return ((Bomba) minas[linha][coluna]).getRevelado();
-        } else {
-            return false; // ou qualquer outra coisa que faça sentido para o seu código
-        }
-    }
-
-
     public boolean getCelula(int linha, int coluna){
         return minas[linha][coluna].temCelula();
     }

@@ -7,8 +7,6 @@ public class Vizinha extends Celula {
         this.minaAoRedor = 0;
     }
 
-    //get/set
-
     public int getMinaAoRedor() {
         return minaAoRedor;
     }
