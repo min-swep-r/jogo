@@ -69,6 +69,19 @@ vou seguir e coloar no trab do git
 
 ---
 
+## 2024-02-11
+0143
+
+após 5h eu descobri que dá pra converter a instancia pai em instancia filho
+
+chamado de upcasting e downcasting
+
+> preciso recuperar rapidamente o tempo perdido
+
+1438
+
+vamos separar!
+
 
 
 
