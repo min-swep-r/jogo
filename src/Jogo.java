@@ -1,3 +1,4 @@
+import Suplement.Suply;
 import java.util.Scanner;
 
 public class Jogo {
@@ -17,34 +18,26 @@ public class Jogo {
 
     // Métodos
     public void iniciaJogo(Jogo jg) {
+        System.out.println("Debug 4");
         // Colocar o user e o...
-        Promptar.cls();
-        System.out.println("Jogo Iniciado!!! aperte um botão");
+        Suply.cls();
+        System.out.println("Jogo Iniciado para " + jg.usuarioObj.getNome() + "!!! Aperte um botão");
         //Promptar.legenda(); tirei daqui e lancei no check
         boolean bound = true;
         //Loop do game
-         do {
-             Promptar.cls();
-             Promptar.printMina(jg);
-             Promptar.legenda();
+        do {
+            Suply.cls();
+            Promptar.printMina(jg);
+            Promptar.legenda();
+            jg.tableObj.jogadas();
 
             Scanner scr = new Scanner(System.in);
             char var = scr.next().charAt(0);
             bound = Promptar.check(var, jg); //na option que dá false, o loop termina, volta mas nem inicia
+
+            jg.tableObj.incrmenTime();
         }while (bound);
 
-    }
-
-    public void verificaJogo() {
-        System.out.println("Verificado e acessado!");
-    }
-
-    public void revelaCel() {
-        // Impl
-    }
-
-    public void marcaCel() {
-        // Impl
     }
 
     public int getTamXObj() {

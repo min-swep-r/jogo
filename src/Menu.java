@@ -1,3 +1,5 @@
+import Suplement.Suply;
+
 import java.util.Scanner;
 
 public class Menu {
@@ -28,7 +30,7 @@ public class Menu {
 
         switch (this.iteraDoObj) {
             case 1:
-                Promptar.cls();
+                Suply.cls();
                 System.out.println("Jogar!");
                 //Daqui, vai ser iniciado um jogo, que terá seu user && que terá seu tabuleiro, que terá suas células
 
@@ -51,20 +53,20 @@ public class Menu {
                     jg.iniciaJogo(jg);
                 }
 
-                Promptar.cls();
+                Suply.cls();
                 System.out.println("Jogue Novamente!");
                 options();
 
 
                 break;
             case 2:
-                Promptar.cls();
+                Suply.cls();
                 System.out.println("Config!"); //Um método do proprio menu
                 defineDif();
 
                 break;
             case 3:
-                Promptar.cls();
+                Suply.cls();
                 System.out.println("Ranking!");
                 Ranking rk = new Ranking();
                 rk.call();
@@ -76,12 +78,12 @@ public class Menu {
 
                 break;
             case 4:
-                Promptar.cls();
+                Suply.cls();
                 System.out.println("Saindo do Game. Ateh logo!\n");
                 System.exit(0);
                 break;
             default:
-                Promptar.cls();
+                Suply.cls();
                 System.out.println("Option invalida. Por favor, escolha uma option valida.");
                 options();
         }
@@ -107,22 +109,22 @@ public class Menu {
         switch (escolhaDificuldade) {
             case 1:
                 this.stateDificuldade = 1;
-                Promptar.cls();
+                Suply.cls();
                 System.out.println("Dificuldade definida como Fácil.");
                 options();
                 break;
             case 2:
                 this.stateDificuldade = 2;
-                Promptar.cls();
+                Suply.cls();
                 System.out.println("Dificuldade definida como Difícil.");
                 options();
                 break;
             case 3:
-                Promptar.cls();
+                Suply.cls();
                 System.out.println("Wellcome back!");
                 options();
             default:
-                Promptar.cls();
+                Suply.cls();
                 System.out.println("inválido. Aqui vem o try catch do erro");
                 defineDif();
                 break;

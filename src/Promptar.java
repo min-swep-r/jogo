@@ -1,36 +1,6 @@
 import java.util.Scanner;
-
+import Suplement.Suply;
 public class Promptar {
-
-    public static void main(String[] args) {
-        // Chama o método para limpar o console
-        cls();
-    }
-
-    public static void cls() {
-        // Verifica se o sistema operacional é Windows
-        if (System.getProperty("os.name").contains("Windows")) {
-            limparConsoleWindows();
-        } else {
-            // Caso contrário, assume-se que é um sistema operacional baseado em Unix
-            limparConsoleUnix();
-        }
-    }
-
-    private static void limparConsoleWindows() {
-        try {
-            new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
-        } catch (Exception e) {
-            // Lidar com exceções, se necessário
-            e.printStackTrace();
-        }
-    }
-
-    private static void limparConsoleUnix() {
-        System.out.print("\033[H\033[2J");
-        System.out.flush();
-    }
-
     //Novas ultilidades, vou colocar os I/O do console aqui...
 
     //primeiro Get
@@ -43,49 +13,49 @@ public class Promptar {
             // Lógica para a tecla 'a'
             System.out.println("Tecla 'a' pressionada. o get do user é: " + jg.usuarioObj.getNome()); //ToDo ->  + Jogo.user.getNome;
             //System.out.println(jg.User.getNome); //quero usar o get aqui
-            pause(3.882f);
+            Suply.pause(3.882f);
             return true;
         } else if (var == 's') {
             System.out.println("saindo.");
 
             //false pra terminar o loop. no arquivo.class fica read-only o que será usado
-            pause(1);
+            Suply.pause(1);
             return false;
         } else if (var == 'i') {
             System.out.println("input - mudando celula.");
             //método de fazer celula virar mina
             colocaMina(jg);
-            pause(1);
+            Suply.pause(1);
             return true;
         } else if (var == 'o') {
             System.out.println("out - printando celulas");
             //método de printar
             checkCoord(jg);
-            pause(1);
+            Suply.pause(1);
             return true;
         } else if (var == 'p') {
             System.out.println("print - exibindo célula.");
             //método de exibir
             printMinaDebug(jg); //Função antiga, agr vou usar pa debug
-            pause(2.65);
+            Suply.pause(2.65);
             return true;
         } else if (var == 'e') {
             System.out.println("escavando...");
             //método de escavar
             escava(jg);
-            pause(1);
+            Suply.pause(1);
             return true;
         }
         else if (var == 'b') {
             System.out.println("Changing bandeira");
             //método de escavar
             scouting(jg);
-            pause(1);
+            Suply.pause(1);
             return true;
         } else {
             // Lógica para outras teclas, se necessário
             System.out.println("Tecla não reconhecida.");
-            pause(1);
+            Suply.pause(1);
             return true;
         }
     }
@@ -135,13 +105,13 @@ public class Promptar {
         //Vou criar daqui uma restrição pra não cavar a celula bandeirada
         if (celula.getBaneira()){
             System.out.println("Po, com bandeira nõ vale escavar!!!");
-            pause(1); //pra repensar nos atos
+            Suply.pause(1); //pra repensar nos atos
         } else if (celula.celRevelado()) {
             System.out.println("escavar dnv, boy?");
-            pause(1); //pra repensar nos atos
+            Suply.pause(1); //pra repensar nos atos
         } else if (celula.getRevelado()) {//se escavar com bomba
             System.out.println("tlgd que tu perdeu, né??????????"); //ToDo fazer algo mis dinamico, como motrar a impressão, uma splash, sla
-            pause(5.1); //pra repensar nos atos
+            Suply.pause(5.1); //pra repensar nos atos
         } else {
             if (celula != null) {
                 celula.revelaCelula();
@@ -169,7 +139,7 @@ public class Promptar {
         //se a celula já tiver escavada, tbm nem adianta
         if (celula.celRevelado()) {
             System.out.println("Oxi, pra que bandeira aqui se tu já escavou?");
-            pause(1); //pra repensar nos atos
+            Suply.pause(1); //pra repensar nos atos
         } else { //aqui é o funcionamento padrão
             if (celula != null) {
                 celula.mudaBandeira();
@@ -272,27 +242,5 @@ public class Promptar {
             System.out.println(); // Nova linha para a próxima linha do tabuleiro
         }
     }
-
-    public static void pause(int seg) {
-        //solução do chat gpt pra pausar 1sec
-        int miliseg = 1000*seg;
-        long startTime = System.currentTimeMillis();
-        long elapsedTime;
-        do {
-            elapsedTime = System.currentTimeMillis() - startTime;
-        } while (elapsedTime < miliseg); // Espera até 1 segundo ter passado
-    }
-
-    ///Vou tentar dar um over aqui
-    public static void pause(double seg) {
-        //solução do chat gpt pra pausar 1sec
-        double miliseg = 1000.2 * seg;
-        long startTime = System.currentTimeMillis();
-        long elapsedTime;
-        do {
-            elapsedTime = System.currentTimeMillis() - startTime;
-        } while (elapsedTime < miliseg); // Espera até 1 segundo ter passado
-    }
-
 
 }

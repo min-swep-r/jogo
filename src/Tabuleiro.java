@@ -72,18 +72,11 @@ public class Tabuleiro {
         return minas[linha][coluna];
     }
 
-
-
-//    public void clicarCelula(int linha, int coluna) {
-//        Celula celulaClicada = minas[linha][coluna];
-//
-//        // Verificar se a célula já foi revelada ou marcada
-//        if (!celulaClicada.getRevelado()) {
-//            // Lógica para revelar a célula ou marcar
-//            celulaClicada.revelarCelula(); // Método que você precisará implementar na classe Celula
-//        } else {
-//            System.out.println("Célula já revelada ou marcada. Escolha outra célula.");
-//        }
-//    }
-
+    public void incrmenTime(){
+        this.tempo += 1;
+    }
+    public void jogadas(){
+        System.out.println("Suas Jogadas: "+this.tempo);
+    }
+//Para Tabuleiro
 }
