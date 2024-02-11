@@ -132,27 +132,33 @@ public class Promptar {
         // Acessa a célula específica e chama o método revelaCelula()
         Celula celula = jg.tableObj.getMinaFull(linha, coluna);
 
-        //Vou criar daqui uma restrição pra não cavar a celula bandeirada
-        if (celula.getBaneira()){
-            System.out.println("Po, com bandeira nõ vale escavar!!!");
-            pause(1); //pra repensar nos atos
-        } else if (celula.celRevelado()) {
-            System.out.println("escavar dnv, boy?");
-            pause(1); //pra repensar nos atos
-        } else if (celula.getRevelado()) {//se escavar com bomba
-            System.out.println("tlgd que tu perdeu, né??????????"); //ToDo fazer algo mis dinamico, como motrar a impressão, uma splash, sla
-            pause(5.1); //pra repensar nos atos
+        // Verifica se a célula está marcada com uma bandeira
+        if (celula.getBaneira()) {
+            System.out.println("Po, com bandeira não vale escavar!!!");
+            pause(1); // Pausa para repensar nos atos
         } else {
-            if (celula != null) {
-                celula.revelaCelula();
-                System.out.println("Célula escavada!");
+            // Verifica se a célula é uma instância de Bomba e se está revelada
+            if (celula instanceof Bomba) {
+                if (((Bomba) celula).getRevelado()) {
+                    System.out.println("Você cavou em uma bomba! Game over.");
+                    pause(5.1); // Pausa para repensar nos atos
+                }
+            } else if (celula instanceof Celula) {
+                // Verifica se a célula já está revelada
+                if (((Celula) celula).celRevelado()) {
+                    System.out.println("Você já cavou nessa célula. Tente novamente.");
+                    pause(1); // Pausa para repensar nos atos
+                } else {
+                    // Caso contrário, revela a célula
+                    celula.revelaCelula();
+                    System.out.println("Célula escavada!");
+                }
             } else {
                 System.out.println("Erro ao acessar a célula.");
             }
         }
-
-
     }
+
 
     public static void scouting(Jogo jg) {
         //--------------------------------------------obtem a célula e "clona"------
@@ -235,20 +241,20 @@ public class Promptar {
                 Celula celula = jg.tableObj.getMinaFull(i, j);
 
                 // Verifica se a célula foi revelada
-
-                if (celula.getBaneira()){ //"se tiver bandeira..."
-                    System.out.print("P ");
-                } else if (celula.celRevelado()) { //"se... já tiver revelado / ESCAVADO..."
-                    //----------------------------------------------
-                    //Aninhamento de condições pois são duplas (AND)
-
-                    // Verifica se a célula contém uma mina
-                    if (celula.getRevelado()) { //"se tiver bomba"
-                        System.out.print("X "); // X se a célula contém uma mina e foi revelada
+                if (celula.getBaneira()) {
+                    System.out.print("P "); // P se a célula está marcada com uma bandeira
+                } else if (celula.celRevelado()) {
+                    // Se a célula foi revelada
+                    if (celula instanceof Bomba) {
+                        // Verifica se a célula é uma bomba
+                        if (((Bomba) celula).getRevelado()) {
+                            System.out.print("X "); // X se a célula é uma bomba e foi revelada
+                        } else {
+                            System.out.print(". "); // Ponto se a célula não é uma bomba e foi revelada
+                        }
                     } else {
-                        System.out.print(". "); // Ponto se a célula não contém uma mina e foi revelada
+                        System.out.print(". "); // Ponto se a célula não é uma bomba e foi revelada
                     }
-                    //----------------------------------------------
                 } else {
                     System.out.print("\u25A1 "); // Quadrado se a célula não foi revelada
                 }
@@ -256,6 +262,7 @@ public class Promptar {
             System.out.println(); // Nova linha para a próxima linha do tabuleiro
         }
     }
+
 
 
     public static void printMinaDebug(Jogo jg) {
