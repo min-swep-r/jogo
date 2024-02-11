@@ -16,8 +16,10 @@ Vou dar uma implementada no I/O, para ficar melhor exibido.
 ### CHECKPOINT 2 –
 > Não sei se era o mais correto, mas antes de implementar a herança e o POO no jogo, resolvi deixar o jogo... Jogável!
 
-- [ ] Projeto: considerando que uma célula pode ser bomba, vizinha a bomba ou espaço vazio, expanda a classe utilizada para representar cada célula do tabuleiro utilizando o conceito de herança. 
-![Figure 1](/.eraser/r0Ycd1dM9fH9k5vtRZ8n___ibsr7NFOmZXGn92bwac608CiSpo2___---figure---pFdsBiMzCsWxMWfLSgPn3---figure---E1WrAk5PUvAwcqRu-Y96AQ.png "Figure 1")
+- [x] Projeto: considerando que uma célula pode ser bomba, vizinha a bomba ou espaço vazio, expanda a classe utilizada para representar cada célula do tabuleiro utilizando o conceito de herança. 
+![Figure 1](/.eraser/r0Ycd1dM9fH9k5vtRZ8n___ibsr7NFOmZXGn92bwac608CiSpo2___---figure---PcMXKx6OYaxtv8WTFWcTJ---figure---E1WrAk5PUvAwcqRu-Y96AQ.png "Figure 1")
+
+> Certo, acho que aqui está realmente dificil pra implementar.
 
 - [ ] Projeto: Inclua no diagrama de classes, as classes para comunicação com o usuário e que permitirão a execução do jogo. 
 - [x] Projeto: permita que o usuário marque uma célula fechada com bandeira (candidata a ter bomba). Células marcadas com bandeira não podem ser abertas se a bandeira não for retirada antes. 
