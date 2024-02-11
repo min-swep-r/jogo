@@ -32,6 +32,9 @@ public class Menu {
                 System.out.println("Jogar!");
                 //Daqui, vai ser iniciado um jogo, que terá seu user && que terá seu tabuleiro, que terá suas células
 
+                Graphics graph = new Graphics();
+                graph.openWindow();
+
                 if (this.stateDificuldade == 1) {
                     int tamMatrix = 5;
                     int numBombas = 5; // Número total de bombas para a dificuldade fácil
