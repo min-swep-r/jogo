@@ -82,6 +82,8 @@ chamado de upcasting e downcasting
 
 vamos separar!
 
+> acho que vazio é a standard, que já está.
+
 
 
 
