@@ -10,7 +10,7 @@ Roteiro: [﻿AQUI!!!](https://drive.google.com/file/d/1JilxkVmk3AX6HuuT0fsHob_Fm
 
 
 ### Primeiro diagrama:
-![Figure 1](/.eraser/eBwPst8QmxllTjqJEaFD___ibsr7NFOmZXGn92bwac608CiSpo2___---figure---SvEL5Xfv4K6PqgGr1tnOg---figure---x6unebMDUbX_A9iBRd3dxQ.png "Figure 1")
+![Figure 1](/.eraser/eBwPst8QmxllTjqJEaFD___ibsr7NFOmZXGn92bwac608CiSpo2___---figure---SAXXGggRzFZ3DmSMky_iC---figure---x6unebMDUbX_A9iBRd3dxQ.png "Figure 1")
 
 
 
@@ -53,8 +53,10 @@ cheque a versão do java no prompt `java -version` && baixe + substitua o OpenJF
 
 ---
 
-## Futuramente no Replit!
-Aguarde, ainda estou implementando!
+## Agora, no Replit!
+[﻿replit.com/@Vjfrib/MySweeper?v=1](https://replit.com/@Vjfrib/MySweeper?v=1)  (arquivos transplantados, apenas)
+
+[﻿github.com/Vjfrib/SweepinTheLand](https://github.com/Vjfrib/SweepinTheLand)  tenho que averiguar se essa vai ser a versão final.
 
 ---
 
