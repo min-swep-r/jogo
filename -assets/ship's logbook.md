@@ -111,6 +111,20 @@ Cavalary charge. Após o aniversário de vó, pretendo me internar
 - [ ] Voltar rapidamnte!
 ---
 
+blz, juro que tentei
+
+1420
+
+vamos um passo de cada vez.
+
+1835
+
+Em passos lentos, tenho avançado. é importante se manter alinhado com o objetivo final.
+
+Confúcio se tornou sabio não por estar onde chegou. Mas sim, por aos 15 ter começado e se mantido no que escolheu.
+
+
+
 
 
 
