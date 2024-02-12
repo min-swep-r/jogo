@@ -96,5 +96,9 @@ fiz a merda, vou tentar fazer o correto. "corrija seus erros e eles sumirão rap
 
 acho que dá pa continuar na pogramação normal
 
+2308
+
+Acho que coloquei assets demais. vamos pro que vale realmente
+
 
 <!--- Eraser file: https://app.eraser.io/workspace/39N9EaMfzypA4hiNoDwB --->
