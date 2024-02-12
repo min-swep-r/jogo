@@ -48,4 +48,20 @@ public class Jogo {
         return tamYObj;
     }
 
+    public void gameOver() {
+        Suply.cls(); // Limpa a tela
+        System.out.println("Game Over!"); // Exibe a mensagem de "Game Over"
+        System.out.println("Pontuação: " + tableObj.getTempo() + "(jogadas)");
+        System.out.println("Digite seu nome:");
+        Scanner scr = new Scanner(System.in);
+        String nomeDoPlayer = scr.nextLine();
+        //setar pra depois pegar
+        usuarioObj.setNome(nomeDoPlayer);
+        Suply.pause(1);
+
+        Suply.cls();
+        // Chama o método para salvar o ranking
+        Ranking.salvarRanking(usuarioObj.getNome(), tableObj.getTempo());
+    }
+
 }

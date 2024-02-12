@@ -49,12 +49,21 @@ public class Promptar {
             System.out.print("Digite a coluna: ");
             int coluna = scanner.nextInt();
 
-            escava(linha, coluna, jg);
+            int result = escava(linha, coluna, jg);
+
+            if (result == 2) {
             System.out.println("indo escavar as prox!");
             revelaSides(linha, coluna, jg);
-
             Suply.pause(1);
             return true;
+
+            } else if(result == 1){
+                System.out.println("Jogue dnv, peste atenção!");
+                return true;
+            } else{
+                jg.gameOver();
+                return false;
+            }
         }
         else if (var == 'b') {
             System.out.println("Changing bandeira");
@@ -102,7 +111,7 @@ public class Promptar {
 
     }
 
-    public static void escava(int linha, int coluna, Jogo jg) {
+    public static int escava(int linha, int coluna, Jogo jg) {
         // Acessa a célula específica e chama o método revelaCelula()
         Celula celula = jg.tableObj.getMinaFull(linha, coluna);
 
@@ -110,18 +119,26 @@ public class Promptar {
         if (celula.getBaneira()){
             System.out.println("Po, com bandeira nõ vale escavar!!!");
             Suply.pause(1); //pra repensar nos atos
+            return 1;
         } else if (celula.celRevelado()) {
             System.out.println("escavar dnv, boy?");
             Suply.pause(1); //pra repensar nos atos
+            return 1;
         } else if (celula.getRevelado()) {//se escavar com bomba
             System.out.println("tlgd que tu perdeu, né??????????"); //ToDo fazer algo mis dinamico, como motrar a impressão, uma splash, sla
             Suply.pause(5.1); //pra repensar nos atos
+            return 0;
+
         } else {
             if (celula != null) {
                 celula.revelaCelula();
                 System.out.println("Célula escavada!");
+                return 2;
+
             } else {
                 System.out.println("Erro ao acessar a célula.");
+                return 0;
+
             }
         }
 

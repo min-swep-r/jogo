@@ -78,5 +78,7 @@ public class Tabuleiro {
     public void jogadas(){
         System.out.println("Suas Jogadas: "+this.tempo);
     }
+
+    public int getTempo(){return this.tempo;}
 //Para Tabuleiro
 }
