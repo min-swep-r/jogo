@@ -10,20 +10,34 @@ import javafx.event.EventHandler;
 import javafx.event.ActionEvent;
 import javafx.scene.layout.StackPane;
 
+import javafx.scene.image.Image;
+
+
 public class Graphics extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        primaryStage.setTitle("Janela JavaFX");
-        Label label = new Label("Em breve, implementação gráfica");
+        primaryStage.setTitle("Janela Personalizada");
+
+        // Definindo o ícone da janela
+        Image icon = new Image(getClass().getResourceAsStream("icon.png"));
+        primaryStage.getIcons().add(icon);
+
+        // Definindo a cor de fundo da janela
         StackPane root = new StackPane();
-        root.getChildren().add(label);
+        root.setStyle("-fx-background-color: lightblue;"); // Cor de fundo da janela
         primaryStage.setScene(new Scene(root, 300, 200));
+
+        // Adicionando um label
+        Label label = new Label("Em breve, implementação gráfica");
+        root.getChildren().add(label);
+        StackPane.setAlignment(label, Pos.CENTER);
+
         primaryStage.show();
     }
 
     public static void openWindow() {
-        new Thread(() -> launch(Graphics.class)).start(); //Iniciado como uma função Á parte!!!
+        new Thread(() -> launch(Graphics.class)).start(); // Iniciado como uma função à parte!!!
     }
 
     public static void main(String[] args) {
