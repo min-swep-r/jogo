@@ -18,7 +18,7 @@ public class Menu {
         Scanner scanner = new Scanner(System.in);
 
         //Promptar.cls();
-
+        //System.out.println("Debug do compile");
         System.out.println("Menu");
         System.out.println("1. Jogar");
         System.out.println("2. Config");

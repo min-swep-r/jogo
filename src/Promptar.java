@@ -50,7 +50,9 @@ public class Promptar {
             int coluna = scanner.nextInt();
 
             escava(linha, coluna, jg);
+            System.out.println("indo escavar as prox!");
             revelaSides(linha, coluna, jg);
+
             Suply.pause(1);
             return true;
         }
@@ -126,6 +128,7 @@ public class Promptar {
     }
 
     public static void revelaSides(int linha, int coluna, Jogo jg) {
+        System.out.println("CHegou pra escavar");
         for (int i = linha - 1; i <= linha + 1; i++) {
             for (int j = coluna - 1; j <= coluna + 1; j++) {
                 // Verifica se as coordenadas estão dentro dos limites do tabuleiro
