@@ -42,7 +42,15 @@ public class Promptar {
         } else if (var == 'e') {
             System.out.println("escavando...");
             //método de escavar
-            escava(jg);
+
+            System.out.print("Digite a linha: ");
+            Scanner scanner = new Scanner(System.in);
+            int linha = scanner.nextInt();
+            System.out.print("Digite a coluna: ");
+            int coluna = scanner.nextInt();
+
+            escava(linha, coluna, jg);
+            revelaSides(linha, coluna, jg);
             Suply.pause(1);
             return true;
         }
@@ -92,13 +100,7 @@ public class Promptar {
 
     }
 
-    public static void escava(Jogo jg) {
-        System.out.print("Digite a linha: ");
-        Scanner scanner = new Scanner(System.in);
-        int linha = scanner.nextInt();
-        System.out.print("Digite a coluna: ");
-        int coluna = scanner.nextInt();
-
+    public static void escava(int linha, int coluna, Jogo jg) {
         // Acessa a célula específica e chama o método revelaCelula()
         Celula celula = jg.tableObj.getMinaFull(linha, coluna);
 
@@ -121,7 +123,22 @@ public class Promptar {
             }
         }
 
+    }
 
+    public static void revelaSides(int linha, int coluna, Jogo jg) {
+        for (int i = linha - 1; i <= linha + 1; i++) {
+            for (int j = coluna - 1; j <= coluna + 1; j++) {
+                // Verifica se as coordenadas estão dentro dos limites do tabuleiro
+                if (i >= 0 && i < jg.getTamXObj() && j >= 0 && j < jg.getTamYObj()) {
+                    // Acessa a célula vizinha
+                    Celula side = jg.tableObj.getMinaFull(i, j);
+                    // Se a célula vizinha não foi revelada e não contém uma bomba, revela ela
+                    if (!side.celRevelado() && !side.getRevelado()) {
+                        escava(i, j, jg); // Chamada recursiva para revelar as células vizinhas
+                    }
+                }
+            }
+        }
     }
 
     public static void scouting(Jogo jg) {
