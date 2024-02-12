@@ -100,5 +100,18 @@ acho que dá pa continuar na pogramação normal
 
 Acho que coloquei assets demais. vamos pro que vale realmente
 
+## 2024-02-12
+0058
+
+dormir ´r bom, mas vamos acelerar. blitzkrieg: foward is victory
+
+Cavalary charge. Após o aniversário de vó, pretendo me internar
+
+- [ ] Acordar cedo
+- [ ] Voltar rapidamnte!
+---
+
+
+
 
 <!--- Eraser file: https://app.eraser.io/workspace/39N9EaMfzypA4hiNoDwB --->
