@@ -92,5 +92,9 @@ Rapaz, tá dificil.
 
 fiz a merda, vou tentar fazer o correto. "corrija seus erros e eles sumirão rapidamente. faça disso um hábito e não terá acumulo. se tentar oculta-los, se tornará mais doloroso e indigno".
 
+2211
+
+acho que dá pa continuar na pogramação normal
+
 
 <!--- Eraser file: https://app.eraser.io/workspace/39N9EaMfzypA4hiNoDwB --->
