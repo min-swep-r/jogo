@@ -61,7 +61,7 @@ public class Promptar {
                 System.out.println("Jogue dnv, peste atenção!");
                 return true;
             } else{
-                jg.gameOver();
+                jg.gameOver2();
                 return false;
             }
         }

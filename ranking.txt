@@ -5,3 +5,7 @@ vini,1
 vinizin,4
 caramba!,0
 blz, acho que tabem normal!,10
+oxi,0
+Default Facil,19
+vini!!!,16
+vini!!!,16
