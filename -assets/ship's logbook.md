@@ -123,9 +123,14 @@ Em passos lentos, tenho avançado. é importante se manter alinhado com o objeti
 
 Confúcio se tornou sabio não por estar onde chegou. Mas sim, por aos 15 ter começado e se mantido no que escolheu.
 
+---
 
+## 2024-02-13
+2046
 
+consegui criar win/defeat
 
+vou pra exibir o numeros
 
 
 <!--- Eraser file: https://app.eraser.io/workspace/39N9EaMfzypA4hiNoDwB --->
