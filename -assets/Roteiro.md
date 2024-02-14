@@ -17,7 +17,7 @@ Vou dar uma implementada no I/O, para ficar melhor exibido.
 > Não sei se era o mais correto, mas antes de implementar a herança e o POO no jogo, resolvi deixar o jogo... Jogável!
 
 - [x] Projeto: considerando que uma célula pode ser bomba, vizinha a bomba ou espaço vazio, expanda a classe utilizada para representar cada célula do tabuleiro utilizando o conceito de herança. 
-![Figure 1](/.eraser/r0Ycd1dM9fH9k5vtRZ8n___ibsr7NFOmZXGn92bwac608CiSpo2___---figure---DpsJ1b_QDVpJiGrWjTiNv---figure---E1WrAk5PUvAwcqRu-Y96AQ.png "Figure 1")
+![Figure 1](/.eraser/r0Ycd1dM9fH9k5vtRZ8n___ibsr7NFOmZXGn92bwac608CiSpo2___---figure---Ifw4DD15ql42OlnlFHw8H---figure---E1WrAk5PUvAwcqRu-Y96AQ.png "Figure 1")
 
 > Certo, acho que aqui está realmente dificil pra implementar.
 
@@ -26,7 +26,7 @@ Vou dar uma implementada no I/O, para ficar melhor exibido.
 > acabou que aqui eu dei uma pulada, ao tentar lançar o I/O
 
 - [x] Projeto: ao abrir uma célula que não tem bomba na vizinhança, todas suas células vizinhas devem ser abertas de maneira sucessiva. 
-- [ ] Projeto: Implemente o código do diagrama atualizado que seja necessário para que 2 usuários consigam interagir. 
+- [x] Projeto: Implemente o código do diagrama atualizado que seja necessário para que 2 usuários consigam interagir. 
 - [ ] Projeto: separe as classes do jogo em pacotes (ao menos dois) 
 - [ ] Projeto: revise o código e verifique o nível de encapsulamento de cada classe e se as boas práticas estão sendo respeitadas.
 ---
