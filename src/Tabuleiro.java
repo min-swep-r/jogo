@@ -61,9 +61,26 @@ public class Tabuleiro {
             if (!minas[linha][coluna].minaAqui) {
                 minas[linha][coluna].mudarCelula(); // Define a célula como uma bomba, passando pra true
                 bombasRestantes--;
+                atualizarMinasAoRedor(linha, coluna); // Atualiza as células vizinhas
             }
 
 
+        }
+    }
+
+    private void atualizarMinasAoRedor(int linha, int coluna) {
+        for (int i = linha - 1; i <= linha + 1; i++) {
+            for (int j = coluna - 1; j <= coluna + 1; j++) {
+                // Verifica se as coordenadas estão dentro dos limites do tabuleiro
+                if (i >= 0 && i < minas.length && j >= 0 && j < minas[0].length) {
+                    // Acessa a célula vizinha
+                    Celula vizinha = minas[i][j];
+                    // Incrementa o atributo minaAoRedor se a célula não for uma bomba
+                    if (!vizinha.minaAqui) {
+                        vizinha.putSide();
+                    }
+                }
+            }
         }
     }
 
@@ -78,5 +95,7 @@ public class Tabuleiro {
     public void jogadas(){
         System.out.println("Suas Jogadas: "+this.tempo);
     }
+
+    public int getTempo(){return this.tempo;}
 //Para Tabuleiro
 }

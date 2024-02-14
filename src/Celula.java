@@ -53,6 +53,9 @@ public class Celula {
         System.out.println("agora a baneira é: "+ this.minaMarcada);
         return minaRevelada;
     } //Standard (todas)
+
+    public void putSide(){this.minaAoRedor++;}
+    public int getSide(){return this.minaAoRedor;}
 }
 //Paara o ponto 1 do checkpoint 2, vou precisar, para TUDO, dizer se é de bomba, arround ou vazia.
 //onde no jogo e no promptar tiver celula, vou ter que adequar

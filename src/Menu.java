@@ -71,6 +71,7 @@ public class Menu {
                 System.out.println("\nPressione Enter para voltar tecla para continuar!");
                 Scanner scn = new Scanner(System.in);
                 scn.nextLine();
+                Suply.cls();
                 options(); //GoTo o menu
 
                 break;
