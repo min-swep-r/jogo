@@ -29,7 +29,7 @@ public class Graphics extends Application {
         primaryStage.setScene(new Scene(root, 300, 200));
 
         // Adicionando um label
-        Label label = new Label("Em breve, implementação gráfica");
+        Label label = new Label("Implementação gráfica");
         root.getChildren().add(label);
         StackPane.setAlignment(label, Pos.CENTER);
 
@@ -54,7 +54,25 @@ public class Graphics extends Application {
 
     private void segundoFrame(Stage primaryStage, Scene firstScene) {
         // Criando botão "Voltar"
+
+        Button jogarButton = new Button("Jogar");
+        Button configButton = new Button("Config");
+        Button rankingButton = new Button("Ranking");
         Button backButton = new Button("Voltar");
+
+        jogarButton.setOnAction(e -> {
+            // Implemente aqui a ação desejada ao clicar em "Jogar"
+        });
+
+        configButton.setOnAction(e -> {
+            // Implemente aqui a ação desejada ao clicar em "Config"
+        });
+
+        rankingButton.setOnAction(e -> {
+            // Implemente aqui a ação desejada ao clicar em "Ranking"
+        });
+
+
         backButton.setOnAction(e -> {
             // Volta para o primeiro frame
             primaryStage.setScene(firstScene);
@@ -63,7 +81,7 @@ public class Graphics extends Application {
         // Criando layout para o segundo frame
         VBox waitFrame = new VBox(10);
         waitFrame.setAlignment(Pos.CENTER);
-        waitFrame.getChildren().addAll(new Label("Espere, kkk"), backButton);
+        waitFrame.getChildren().addAll(new Label("Campo Minado!"), jogarButton, configButton, rankingButton, backButton);
 
         primaryStage.setScene(new Scene(waitFrame, 300, 200));
     }
