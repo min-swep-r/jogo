@@ -12,7 +12,7 @@ import javafx.scene.layout.StackPane;
 
 import javafx.scene.image.Image;
 
-
+//não focar somente nos graphs, mas pegar a manha.
 public class Graphics extends Application {
 
     @Override
