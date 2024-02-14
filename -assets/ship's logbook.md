@@ -132,5 +132,19 @@ consegui criar win/defeat
 
 vou pra exibir o numeros
 
+## 2024-02-14
+0206
+
+Consegui colocar os numeros, deps de muita luta.
+
+# Nova quest: deixar apresentável
+acredito que o jogo em sí... já foi.
+
+
+
+---
+
+
+
 
 <!--- Eraser file: https://app.eraser.io/workspace/39N9EaMfzypA4hiNoDwB --->
