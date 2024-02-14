@@ -1,3 +1,4 @@
+import java.awt.Color;
 import java.util.Scanner;
 import Suplement.Suply;
 public class Promptar {
@@ -126,7 +127,9 @@ public class Promptar {
             return 1;
         } else if (celula.getRevelado()) {//se escavar com bomba
             System.out.println("tlgd que tu perdeu, né??????????"); //ToDo fazer algo mis dinamico, como motrar a impressão, uma splash, sla
-            Suply.pause(5.1); //pra repensar nos atos
+            System.out.println("Olha o mapa:");
+            printMinaDebug(jg);
+            Suply.pause(2.1); //pra repensar nos atos
             return 0;
 
         } else {
@@ -244,7 +247,9 @@ public class Promptar {
                 // Verifica se a célula foi revelada
 
                 if (celula.getBaneira()){ //"se tiver bandeira..."
+                    System.console().printf("\033[35m");
                     System.out.print("P ");
+                    System.console().printf("\033[0m"); // redefinir para a cor padrão
                 } else if (celula.celRevelado()) { //"se... já tiver revelado / ESCAVADO..."
                     //----------------------------------------------
                     //Aninhamento de condições pois são duplas (AND)
@@ -252,6 +257,26 @@ public class Promptar {
                     // Verifica se a célula contém uma mina
                     if (celula.getRevelado()) { //"se tiver bomba"
                         System.out.print("X "); // X se a célula contém uma mina e foi revelada
+                    } else if (celula.getSide() > 0) {
+                        int valor = celula.getSide();
+                        switch (valor) {
+                            case 1:
+                                System.out.print("\033[34m" + valor + " \033[0m"); // Azul
+                                break;
+                            case 2:
+                                System.out.print("\033[31m" + valor + " \033[0m"); // Vermelho
+                                break;
+                            case 3:
+                                System.out.print("\033[33m" + valor + " \033[0m"); // Amarelo
+                                break;
+                            case 4:
+                                System.out.print("\033[32m" + valor + " \033[0m"); // Verde
+                                break;
+                            default:
+                                System.out.print(valor + " "); // Cor padrão
+                                break;
+                        }
+                        //fim das opções
                     } else {
                         System.out.print(". "); // Ponto se a célula não contém uma mina e foi revelada
                     }

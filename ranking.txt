@@ -9,3 +9,6 @@ oxi,0
 Default Facil,19
 vini!!!,16
 vini!!!,16
+teste,224
+teste2,3
+teste4,15

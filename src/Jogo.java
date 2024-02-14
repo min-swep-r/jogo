@@ -20,7 +20,7 @@ public class Jogo {
 
     // Métodos
     public void iniciaJogo(Jogo jg) {
-        //1System.out.println("Debug 4");
+        //System.out.println("Debug 4");
         // Colocar o user e o...
         Suply.cls();
         System.out.println("Jogo Iniciado para " + jg.usuarioObj.getNome() + "!!! Aperte um botão");
@@ -62,7 +62,7 @@ public class Jogo {
     public void gameOver2(){
         Suply.cls();
         System.out.println("Acabou! Jogue dnv!!!");
-        Suply.pause(5.8);
+        Suply.pause(1.8);
         Suply.cls();
     }
     public void gameOver() {
@@ -105,7 +105,7 @@ public class Jogo {
 
         // Se houver células não escavadas, mostra a mensagem e retorna falso
         if (celulasNaoEscavadas > 0) {
-            System.out.println("Continue jogando. Faltam " + celulasNaoEscavadas + " células e " + bombas + "bombas! e " + bandeira + "bandeiras.");
+            System.out.println("Continue jogando. Faltam " + celulasNaoEscavadas + " células, " + bombas + " bombas! e " + bandeira + " bandeiras.");
             return false;
         } else if (bandeira >= 3){
             System.out.println("Pegou " + bandeira + ", acabou!");
