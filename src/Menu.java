@@ -39,14 +39,28 @@ public class Menu {
                     int numBombas = 5; // Número total de bombas para a dificuldade fácil
 
                     // Instâncias pra poder get/set
-                    Jogo jg = new Jogo(new Tabuleiro(tamMatrix, tamMatrix, numBombas), new User(this.stateDificuldade == 1 ? "Default Facil" : "Default Dificil"/*um ternário de 2 options, pra... definir o nome*/), tamMatrix, tamMatrix);
+                    Jogo jg = new Jogo(new Tabuleiro(tamMatrix, tamMatrix, numBombas), new User(this.stateDificuldade == 1 ? "Default Fácil" : this.stateDificuldade == 2 ? "Default Intermediário" : this.stateDificuldade == 3 ? "Default Difícil" : this.stateDificuldade == 4 ? "Default Maluko" : "No one"/*um ternário de 2 options, pra... definir o nome*/), tamMatrix, tamMatrix, false);
                     jg.iniciaJogo(jg);
                 } else if (this.stateDificuldade == 2) {
                     int tamMatrix = 7;
-                    int numBombas = 10; // Número total de bombas para a dificuldade difícil
+                    int numBombas = 10; // Número total de bombas para a dificuldade intermediário
 
                     // Instâncias, com as classes e subclasses e o novo atributo
-                    Jogo jg = new Jogo(new Tabuleiro(tamMatrix, tamMatrix, numBombas), new User(this.stateDificuldade == 1 ? "Default Facil" : "Default Dificil"), tamMatrix, tamMatrix);
+                    Jogo jg = new Jogo(new Tabuleiro(tamMatrix, tamMatrix, numBombas), new User(this.stateDificuldade == 1 ? "Default Fácil" : this.stateDificuldade == 2 ? "Default Intermediário" : this.stateDificuldade == 3 ? "Default Difícil" : this.stateDificuldade == 4 ? "Default Maluko" : "No one"), tamMatrix, tamMatrix, false);
+                    jg.iniciaJogo(jg);
+                } else if (this.stateDificuldade == 3) {
+                    int tamMatrix = 10;
+                    int numBombas = 13; // Número total de bombas para a dificuldade difícil
+
+                    // Instâncias, com as classes e subclasses e o novo atributo
+                    Jogo jg = new Jogo(new Tabuleiro(tamMatrix, tamMatrix, numBombas), new User(this.stateDificuldade == 1 ? "Default Fácil" : this.stateDificuldade == 2 ? "Default Intermediário" : this.stateDificuldade == 3 ? "Default Difícil" : this.stateDificuldade == 4 ? "Default Maluko" : "No one"), tamMatrix, tamMatrix, false);
+                    jg.iniciaJogo(jg);
+                } else if (this.stateDificuldade == 4) {
+                    int tamMatrix = 7;
+                    int numBombas = 10; // Número total de bombas para a dificuldade Maluka
+
+                    // Instâncias, com as classes e subclasses e o novo atributo
+                    Jogo jg = new Jogo(new Tabuleiro(tamMatrix, tamMatrix, numBombas), new User(this.stateDificuldade == 1 ? "Default Fácil" : this.stateDificuldade == 2 ? "Default Intermediário" : this.stateDificuldade == 3 ? "Default Difícil" : this.stateDificuldade == 4 ? "Default Maluko" : "No one"), tamMatrix, tamMatrix, true);
                     jg.iniciaJogo(jg);
                 }
 
@@ -96,8 +110,10 @@ public class Menu {
 
         System.out.println("Escolha a dificuldade:");
         System.out.println("1. Facil");
-        System.out.println("2. Dificil");
-        System.out.println("3. Voltar");
+        System.out.println("2. Intermediário");
+        System.out.println("3. Dificil");
+        System.out.println("4. CAMPO MINADO MALUCO!");
+        System.out.println("5. Voltar");
 
         System.out.print("Escolha uma option: ");
 
@@ -114,10 +130,22 @@ public class Menu {
             case 2:
                 this.stateDificuldade = 2;
                 Suply.cls();
-                System.out.println("Dificuldade definida como Difícil.");
+                System.out.println("Dificuldade definida como Intermediário.");
                 options();
                 break;
             case 3:
+                this.stateDificuldade = 3;
+                Suply.cls();
+                System.out.println("Dificuldade definida como Difícil.");
+                options();
+                break;
+            case 4:
+                this.stateDificuldade = 4;
+                Suply.cls();
+                System.out.println("Dificuldade definida como MALUKA!");
+                options();
+                break;
+            case 5:
                 Suply.cls();
                 System.out.println("Wellcome back!");
                 options();

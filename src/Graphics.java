@@ -17,7 +17,7 @@ public class Graphics extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        primaryStage.setTitle("Janela Personalizada");
+        primaryStage.setTitle("2º EE em LPOO");
 
         // Definindo o ícone da janela
         Image icon = new Image(getClass().getResourceAsStream("icon.png"));

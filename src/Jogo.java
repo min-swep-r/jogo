@@ -8,14 +8,16 @@ public class Jogo {
     private int tamXObj;
     private int tamYObj;
     private boolean vitoria;
+    private boolean malukice;
 
     // Construtor
-    public Jogo(Tabuleiro tableInput, User usuarioInput, int tamXInput, int tamYInput) {
+    public Jogo(Tabuleiro tableInput, User usuarioInput, int tamXInput, int tamYInput, boolean malukiceInput) {
         this.tableObj = tableInput;
         this.usuarioObj = usuarioInput;
         this.tamXObj = tamXInput;
         this.tamYObj = tamYInput;
         this.vitoria = false;
+        this.malukice = malukiceInput;
     }
 
     // Métodos
