@@ -25,7 +25,15 @@ public class Promptar {
         } else if (var == 'i') {
             System.out.println("input - mudando celula.");
             //método de fazer celula virar mina
-            colocaMina(jg);
+
+            System.out.print("Digite a linha: ");
+            Scanner scanner = new Scanner(System.in);
+            int linha = scanner.nextInt();
+            System.out.print("Digite a coluna: ");
+            int coluna = scanner.nextInt();
+
+
+            colocaMina(linha, coluna, jg);
             Suply.pause(1);
             return true;
         } else if (var == 'o') {
@@ -192,13 +200,7 @@ public class Promptar {
     }
 
 
-    public static boolean colocaMina(Jogo jg) {
-
-        System.out.print("Digite a linha: ");
-        Scanner scanner = new Scanner(System.in);
-        int linha = scanner.nextInt();
-        System.out.print("Digite a coluna: ");
-        int coluna = scanner.nextInt();
+    public static boolean colocaMina(int linha, int coluna, Jogo jg) {
 
         // Acessa a célula específica
         boolean temMina = false;
@@ -206,7 +208,6 @@ public class Promptar {
             temMina = jg.tableObj.setMina(linha, coluna); //Jogo.tableDojog.minaDaTable(coordYAltura, CoordXColuna)
         } catch (NullPointerException e) {
             System.out.println("Tá null");
-            scanner.close();
             return true;
         }
 

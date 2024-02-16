@@ -1,5 +1,6 @@
 import Suplement.Suply;
 import java.util.Scanner;
+import java.util.Random;
 
 public class Jogo {
     // Atributos
@@ -41,6 +42,10 @@ public class Jogo {
             bound = Promptar.check(var, jg); //na option que dá false, o loop termina, volta mas nem inicia
 
             jg.tableObj.incrmenTime();
+
+            if (jg.getMalukice()){
+                mudarBomba(jg);
+            }
 
             if (jg.todasCelulasEscavadas()) {
                 jg.setVitoria(true); // Define a vitória como verdadeira
@@ -123,6 +128,31 @@ public class Jogo {
     }
     public void setVitoria(boolean newStats){
         this.vitoria = newStats;
+    }
+
+    public boolean getMalukice(){return this.malukice;}
+
+    public void mudarBomba(Jogo jg) {
+
+        Random random = new Random();
+        int chance = random.nextInt(2); // pra gerar um número aleatório entre 0 e 1 (inclusive)
+        if (chance == 0) {
+
+            System.out.println("A Malukice começou");
+
+            //vou mapear as que são bombas, as que são bombas e estão marcadas e as que são celulas e n foram reveladas.
+            int x = random.nextInt(tamXObj);
+            int y = random.nextInt(tamYObj);
+
+            Celula celula = tableObj.getMinaFull(x, y);
+
+            if (!celula.temCelula()) {
+                Promptar.colocaMina(x,y, jg);
+                System.out.println("Uma bomba foi mudada de lugar!");
+
+            } else {System.out.println("A malukice não deu certo!");}
+
+        }
     }
 
 }
