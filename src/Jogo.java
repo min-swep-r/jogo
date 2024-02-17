@@ -1,6 +1,8 @@
 import Suplement.Suply;
 import java.util.Scanner;
 import java.util.Random;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Jogo {
     // Atributos
@@ -132,27 +134,49 @@ public class Jogo {
 
     public boolean getMalukice(){return this.malukice;}
 
-    public void mudarBomba(Jogo jg) {
+        public void mudarBomba(Jogo jg) {
 
-        Random random = new Random();
-        int chance = random.nextInt(2); // pra gerar um número aleatório entre 0 e 1 (inclusive)
-        if (chance == 0) {
+            Random random = new Random();
+            int chance = random.nextInt(2); // pra gerar um número aleatório entre 0 e 1 (inclusive)
+            if (chance == 0) {
 
-            System.out.println("A Malukice começou");
+                System.out.println("A Malukice começou");
 
-            //vou mapear as que são bombas, as que são bombas e estão marcadas e as que são celulas e n foram reveladas.
-            int x = random.nextInt(tamXObj);
-            int y = random.nextInt(tamYObj);
 
-            Celula celula = tableObj.getMinaFull(x, y);
+                // Lista para armazenar as coordenadas de células não reveladas
+                List<int[]> celulasNaoReveladas = new ArrayList<>();
+                // Lista para armazenar as coordenadas de células com bomba e bandeira
+                List<int[]> bombaEBandeira = new ArrayList<>();
+                //vou mapear as que são bombas, as que são bombas e estão marcadas e as que são celulas e n foram reveladas.
+                for (int i = 0; i < tamXObj; i++) {
+                    for (int j = 0; j < tamYObj; j++) {
+                        Celula celula = tableObj.getMinaFull(i, j);
+                        // Verificar se a célula não foi revelada
+                        if (!celula.getRevelado()) {
+                            celulasNaoReveladas.add(new int[]{i, j});
+                        }
+                        // Verificar se a célula é uma bomba e tem bandeira
+                        if (celula.temCelula() && celula.getBaneira()) {
+                            bombaEBandeira.add(new int[]{i, j});
+                        }
+                    }
+                }
 
-            if (!celula.temCelula()) {
-                Promptar.colocaMina(x,y, jg);
-                System.out.println("Uma bomba foi mudada de lugar!");
 
-            } else {System.out.println("A malukice não deu certo!");}
+                int x = random.nextInt(tamXObj);
+                int y = random.nextInt(tamYObj);
 
+                Celula celula = tableObj.getMinaFull(x, y);
+
+                if (!celula.temCelula()) {
+                    //pegar a celula
+                    Promptar.colocaMina(x,y, jg);
+                    //tirar a bomba e por numa casa não descoberta
+                    System.out.println("Uma bomba foi mudada de lugar!");
+
+                } else {System.out.println("A malukice não deu certo!");}
+
+            }
         }
-    }
 
 }
