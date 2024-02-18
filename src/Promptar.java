@@ -255,9 +255,9 @@ public class Promptar {
                 // Verifica se a célula foi revelada
 
                 if (celula.getBaneira()){ //"se tiver bandeira..."
-                    System.console().printf("\033[35m");
+                    System.out.printf("\033[35m");
                     System.out.print("P ");
-                    System.console().printf("\033[0m"); // redefinir para a cor padrão
+                    System.out.printf("\033[0m"); // redefinir para a cor padrão
                 } else if (celula.celRevelado()) { //"se... já tiver revelado / ESCAVADO..."
                     //----------------------------------------------
                     //Aninhamento de condições pois são duplas (AND)
