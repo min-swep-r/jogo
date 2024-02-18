@@ -17,8 +17,22 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
+import javafx.util.Duration;
+
+
+
 //não focar somente nos graphs, mas pegar a manha.
 public class Graphics extends Application {
+
+    // Variável para armazenar o estado de dificuldade
+    private int stateDificuldade;
+
+    // Método para definir o estado de dificuldade
+    public void setStateDificuldade(int dificuldade) {
+        this.stateDificuldade = dificuldade;
+    }
 
     @Override
     public void start(Stage primaryStage) {
@@ -64,11 +78,13 @@ public class Graphics extends Application {
         Button jogarButton = new Button("Jogar");
         jogarButton.setOnAction(e -> {
             //nesse espaço, aparentemente, vc pode dizer qual a função de chamada do buton
+            iniciarJogo(primaryStage);
         });
 
         Button configButton = new Button("Config");
         configButton.setOnAction(e -> {
-            // Impl
+            // Chama o método para definir a dificuldade
+            defineDif(primaryStage);
         });
 
         Button rankingButton = new Button("Ranking");
@@ -129,7 +145,105 @@ public class Graphics extends Application {
         primaryStage.setScene(rankingScene);
     }
 
+    // Método getter para stateDificuldade
+    public int getStateDificuldade() {
+        return this.stateDificuldade;
+    }
 
+    private void defineDif(Stage primaryStage) {
+        // Layout para a tela de configuração
+        VBox configLayout = new VBox(10);
+        configLayout.setAlignment(Pos.CENTER);
+
+        // Botões para escolher a dificuldade
+        Button easyButton = new Button("Fácil");
+        easyButton.setOnAction(e -> {
+            setStateDificuldade(1);
+            segundoFrame(primaryStage, primaryStage.getScene());
+            exibirMensagemDificuldade(primaryStage, "Fácil");
+        });
+
+        Button intermediateButton = new Button("Intermediário");
+        intermediateButton.setOnAction(e -> {
+            setStateDificuldade(2);
+            segundoFrame(primaryStage, primaryStage.getScene());
+            exibirMensagemDificuldade(primaryStage, "Intermediário");
+        });
+
+        Button hardButton = new Button("Difícil");
+        hardButton.setOnAction(e -> {
+            setStateDificuldade(3);
+            segundoFrame(primaryStage, primaryStage.getScene());
+            exibirMensagemDificuldade(primaryStage, "Difícil");
+        });
+
+        Button crazyButton = new Button("Maluko");
+        crazyButton.setOnAction(e -> {
+            setStateDificuldade(4);
+            segundoFrame(primaryStage, primaryStage.getScene());
+            exibirMensagemDificuldade(primaryStage, "Maluko");
+        });
+
+        // Botão para voltar
+        Button backButton = new Button("Voltar");
+        backButton.setOnAction(e -> segundoFrame(primaryStage, primaryStage.getScene()));
+
+        // Adicionando os botões ao layout
+        configLayout.getChildren().addAll(
+                new Label("Escolha a dificuldade:"), easyButton, intermediateButton, hardButton, crazyButton, backButton
+        );
+
+        // Configurando a cena da tela de configuração
+        Scene configScene = new Scene(configLayout, 300, 200);
+        primaryStage.setScene(configScene);
+    }
+
+    private void exibirMensagemDificuldade(Stage primaryStage, String dificuldade) {
+        // Criando uma mensagem para exibir a dificuldade escolhida
+        VBox mensagemLayout = new VBox(10);
+        mensagemLayout.setAlignment(Pos.CENTER);
+        Label mensagemLabel = new Label("Dificuldade escolhida: " + dificuldade);
+        mensagemLayout.getChildren().addAll(mensagemLabel);
+
+        // Configurando a cena para exibir a mensagem
+        Scene mensagemScene = new Scene(mensagemLayout, 300, 200);
+        primaryStage.setScene(mensagemScene);
+
+        // Agendar uma ação para voltar ao menu inicial após 3 segundos (3000 milissegundos)
+        Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(3), event -> segundoFrame(primaryStage, primaryStage.getScene())));
+        timeline.play();
+    }
+
+    private void iniciarJogo(Stage primaryStage) {
+        int tamMatrix = 0;
+        int numBombas = 0;
+
+        switch (this.stateDificuldade) {
+            case 1:
+                tamMatrix = 5;
+                numBombas = 5;
+                break;
+            case 2:
+                tamMatrix = 7;
+                numBombas = 10;
+                break;
+            case 3:
+                tamMatrix = 10;
+                numBombas = 13;
+                break;
+            case 4:
+                tamMatrix = 7;
+                numBombas = 10;
+                break;
+            default:
+                // Lógica para outras dificuldades, se necessário
+                break;
+        }
+
+        // Instanciando o jogo com os parâmetros configurados
+        Jogo jg = new Jogo(new Tabuleiro(tamMatrix, tamMatrix, numBombas), new User(this.stateDificuldade == 1 ? "Default Fácil" : this.stateDificuldade == 2 ? "Default Intermediário" : this.stateDificuldade == 3 ? "Default Difícil" : this.stateDificuldade == 4 ? "Default Maluko" : "No one"/*um ternário de 2 options, pra... definir o nome*/), tamMatrix, tamMatrix, this.stateDificuldade == 4 ? true : false);
+        jg.iniciaJogo(jg);
+    }
 
 
     // Chamada ------------------------------------------------------------------------------------------------------------------------
