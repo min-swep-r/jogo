@@ -21,6 +21,11 @@ import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.util.Duration;
 
+import javafx.application.Platform;
+
+import javafx.scene.layout.GridPane;
+
+
 
 
 
@@ -249,16 +254,27 @@ public class Graphics extends Application {
     // Exibição ------------------------------------------------------------------------------------------------------------------------
 
     public static void printButtonMatrix(Jogo jg) {
-        System.out.println("Imprimindo matriz de botões:");
+        // Criar uma nova janela
 
-        // Itera sobre todas as células do tabuleiro
+        System.out.println("Jogo iniciado na GUI");
+
+
+        Stage primaryStage = new Stage();
+        primaryStage.setTitle("Jogo");
+
+        // Criar um novo GridPane para organizar os botões
+        GridPane gridPane = new GridPane();
+
+        // Iterar sobre todas as células do tabuleiro
         for (int i = 0; i < jg.getTamXObj(); i++) {
             for (int j = 0; j < jg.getTamYObj(); j++) {
-                // Acessa a célula atual
+                // Acessar a célula atual
                 Celula celula = jg.tableObj.getMinaFull(i, j);
+
+                // Criar um novo botão para exibir o conteúdo da célula
                 Button button = new Button();
 
-                // Configura o texto do botão de acordo com o status da célula
+                // Configurar o texto do botão de acordo com o status da célula
                 if (celula.getBaneira()) { // Se tiver bandeira
                     button.setText("P");
                 } else if (celula.celRevelado()) { // Se já tiver sido revelada
@@ -273,13 +289,29 @@ public class Graphics extends Application {
                     button.setText("\u25A1");
                 }
 
-                // Adiciona o botão à matriz
-                // Aqui você pode adicionar o botão à sua interface gráfica ou apenas imprimir na tela
-                // Exemplo de como imprimir na tela:
-                System.out.print(button.getText() + " ");
+                // Adicionar o botão à grade na posição (i, j)
+                gridPane.add(button, i, j);
+
+                // Adicionar um evento de clique ao botão
+                int linha = i;
+                int coluna = j;
+                button.setOnAction(event -> {
+                    // Lógica para manipular o clique do botão
+                    // Você pode implementar aqui o que acontece quando o botão é clicado
+                    // Por exemplo, revelar a célula correspondente (linha, coluna)
+                    // ou marcar com uma bandeira, etc.
+                });
             }
-            System.out.println(); // Nova linha para a próxima linha do tabuleiro
         }
+
+        // Criar uma cena e adicionar o GridPane a ela
+        Scene scene = new Scene(gridPane, 400, 400);
+
+        // Configurar a cena na janela principal
+        primaryStage.setScene(scene);
+
+        // Exibir a janela
+        Platform.runLater(primaryStage::show);
     }
     // Chamada ------------------------------------------------------------------------------------------------------------------------
     public static void openWindow() {

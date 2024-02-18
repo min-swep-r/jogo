@@ -21,9 +21,10 @@ public class JogoGUI extends Jogo {
 
         boolean gameOver = false;
 
-        do {
-            Graphics.printButtonMatrix(jg);
-        } while (!gameOver);
+        Graphics.printButtonMatrix(jg);
+//        do {
+//será que n precisa de loop?
+//        } while (!gameOver);
     }
 
 }
