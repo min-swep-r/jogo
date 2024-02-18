@@ -25,7 +25,15 @@ public class Promptar {
         } else if (var == 'i') {
             System.out.println("input - mudando celula.");
             //método de fazer celula virar mina
-            colocaMina(jg);
+
+            System.out.print("Digite a linha: ");
+            Scanner scanner = new Scanner(System.in);
+            int linha = scanner.nextInt();
+            System.out.print("Digite a coluna: ");
+            int coluna = scanner.nextInt();
+
+
+            colocaMina(linha, coluna, jg);
             Suply.pause(1);
             return true;
         } else if (var == 'o') {
@@ -70,6 +78,13 @@ public class Promptar {
             System.out.println("Changing bandeira");
             //método de escavar
             scouting(jg);
+            Suply.pause(1);
+            return true;
+        } else if (var == 'm') {
+            System.out.println("check");
+            //método de escavar
+            boolean teste = jg.getMalukice();
+            System.out.println("loucura is: " + teste);
             Suply.pause(1);
             return true;
         } else {
@@ -192,13 +207,7 @@ public class Promptar {
     }
 
 
-    public static boolean colocaMina(Jogo jg) {
-
-        System.out.print("Digite a linha: ");
-        Scanner scanner = new Scanner(System.in);
-        int linha = scanner.nextInt();
-        System.out.print("Digite a coluna: ");
-        int coluna = scanner.nextInt();
+    public static boolean colocaMina(int linha, int coluna, Jogo jg) {
 
         // Acessa a célula específica
         boolean temMina = false;
@@ -206,7 +215,6 @@ public class Promptar {
             temMina = jg.tableObj.setMina(linha, coluna); //Jogo.tableDojog.minaDaTable(coordYAltura, CoordXColuna)
         } catch (NullPointerException e) {
             System.out.println("Tá null");
-            scanner.close();
             return true;
         }
 
@@ -247,9 +255,9 @@ public class Promptar {
                 // Verifica se a célula foi revelada
 
                 if (celula.getBaneira()){ //"se tiver bandeira..."
-                    System.console().printf("\033[35m");
+                    System.out.printf("\033[35m");
                     System.out.print("P ");
-                    System.console().printf("\033[0m"); // redefinir para a cor padrão
+                    System.out.printf("\033[0m"); // redefinir para a cor padrão
                 } else if (celula.celRevelado()) { //"se... já tiver revelado / ESCAVADO..."
                     //----------------------------------------------
                     //Aninhamento de condições pois são duplas (AND)

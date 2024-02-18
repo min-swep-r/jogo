@@ -56,6 +56,8 @@ public class Celula {
 
     public void putSide(){this.minaAoRedor++;}
     public int getSide(){return this.minaAoRedor;}
+
+    public void changeBomba(boolean newState){this.minaAqui = newState;}
 }
 //Paara o ponto 1 do checkpoint 2, vou precisar, para TUDO, dizer se é de bomba, arround ou vazia.
 //onde no jogo e no promptar tiver celula, vou ter que adequar

@@ -1,5 +1,8 @@
 import Suplement.Suply;
 import java.util.Scanner;
+import java.util.Random;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Jogo {
     // Atributos
@@ -8,14 +11,16 @@ public class Jogo {
     private int tamXObj;
     private int tamYObj;
     private boolean vitoria;
+    private boolean malukice;
 
     // Construtor
-    public Jogo(Tabuleiro tableInput, User usuarioInput, int tamXInput, int tamYInput) {
+    public Jogo(Tabuleiro tableInput, User usuarioInput, int tamXInput, int tamYInput, boolean malukiceInput) {
         this.tableObj = tableInput;
         this.usuarioObj = usuarioInput;
         this.tamXObj = tamXInput;
         this.tamYObj = tamYInput;
         this.vitoria = false;
+        this.malukice = malukiceInput;
     }
 
     // Métodos
@@ -39,6 +44,11 @@ public class Jogo {
             bound = Promptar.check(var, jg); //na option que dá false, o loop termina, volta mas nem inicia
 
             jg.tableObj.incrmenTime();
+
+            if (jg.getMalukice()){
+                System.out.println("\nOlha a malukice...\n");
+                mudarBomba(jg);
+            }
 
             if (jg.todasCelulasEscavadas()) {
                 jg.setVitoria(true); // Define a vitória como verdadeira
@@ -122,5 +132,49 @@ public class Jogo {
     public void setVitoria(boolean newStats){
         this.vitoria = newStats;
     }
+
+    public boolean getMalukice(){return this.malukice;}
+
+    public void mudarBomba(Jogo jg) {
+        Random random = new Random();
+        int chance = random.nextInt(2); // pra gerar um número aleatório entre 0 e 1 (inclusive)
+        if (chance == 0) {
+            System.out.println("A Malukice começou");
+
+            // Lista de pares pa armzenar as bombas
+            List<int[]> celulasNaoReveladas = new ArrayList<>(); //não consegui fazer array do typedef Celula
+            List<int[]> bombaEBandeira = new ArrayList<>();
+            //vou mapear as que são bombas, as que são bombas e estão marcadas e as que são celulas e n foram reveladas.
+            for (int i = 0; i < jg.getTamXObj(); i++) {
+                for (int j = 0; j < jg.getTamYObj(); j++) {
+                    Celula celula = jg.tableObj.getMinaFull(i, j);
+                    // captura as coord das não
+                    if (!celula.getRevelado()) {
+                        celulasNaoReveladas.add(new int[]{i, j});
+                    }
+                    // Verificar se a célula é uma bomba && tem bandeira
+                    if (celula.getRevelado() && celula.getBaneira()) { /*Pra debug, basta comentar as bandeias e sair printando*/
+                        bombaEBandeira.add(new int[]{i, j});
+                    }
+                }
+            }
+
+            if (!celulasNaoReveladas.isEmpty() && !bombaEBandeira.isEmpty()) { // Verificar se as listastem coisa
+                // Selecionar aleatoriamente uma coordenada de célula não revelada (ao puxar um par ord (vetor) do array)
+                int[] celulaNaoRevelada = celulasNaoReveladas.get(random.nextInt(celulasNaoReveladas.size()));
+                int[] celulaBombaBandeira = bombaEBandeira.get(random.nextInt(bombaEBandeira.size()));
+
+                // Alterar a célula não revelada para ter uma bomba e a baneiada pra não.
+                jg.tableObj.getMinaFull(celulaNaoRevelada[0], celulaNaoRevelada[1]).changeBomba(true);
+                jg.tableObj.getMinaFull(celulaBombaBandeira[0], celulaBombaBandeira[1]).changeBomba(false);
+
+                System.out.println("\nUma bomba marcada foi mudada de lugar!\n");
+            } else {
+                System.out.println("\nMalukice não deu certo\n"); //Não há células não reveladas ou células com bomba e bandeira para mudar.
+            }
+        }
+    }
+
+
 
 }

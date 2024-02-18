@@ -12,12 +12,12 @@ import javafx.scene.layout.StackPane;
 
 import javafx.scene.image.Image;
 
-
+//não focar somente nos graphs, mas pegar a manha.
 public class Graphics extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        primaryStage.setTitle("Janela Personalizada");
+        primaryStage.setTitle("2º EE em LPOO");
 
         // Definindo o ícone da janela
         Image icon = new Image(getClass().getResourceAsStream("icon.png"));
@@ -29,12 +29,63 @@ public class Graphics extends Application {
         primaryStage.setScene(new Scene(root, 300, 200));
 
         // Adicionando um label
-        Label label = new Label("Em breve, implementação gráfica");
+        Label label = new Label("Implementação gráfica");
         root.getChildren().add(label);
         StackPane.setAlignment(label, Pos.CENTER);
 
+        // Criando botão "Iniciar"
+        Button button = new Button("Iniciar");
+
+        // Criando layout para o primeiro frame
+        VBox vbox1 = new VBox(10);
+        vbox1.setAlignment(Pos.CENTER);
+        vbox1.getChildren().addAll(label, button);
+        root.getChildren().add(vbox1);
+
+        // Eventos do botão ----------------------------------
+        button.setOnAction(e -> {
+            // Chama o método para exibir o segundo frame, passando a cena do primeiro frame
+            segundoFrame(primaryStage, primaryStage.getScene());
+        });
+
+
         primaryStage.show();
     }
+
+    private void segundoFrame(Stage primaryStage, Scene firstScene) {
+        // Criando botão "Voltar"
+
+        Button jogarButton = new Button("Jogar");
+        Button configButton = new Button("Config");
+        Button rankingButton = new Button("Ranking");
+        Button backButton = new Button("Voltar");
+
+        jogarButton.setOnAction(e -> {
+            // Implemente aqui a ação desejada ao clicar em "Jogar"
+        });
+
+        configButton.setOnAction(e -> {
+            // Implemente aqui a ação desejada ao clicar em "Config"
+        });
+
+        rankingButton.setOnAction(e -> {
+            // Implemente aqui a ação desejada ao clicar em "Ranking"
+        });
+
+
+        backButton.setOnAction(e -> {
+            // Volta para o primeiro frame
+            primaryStage.setScene(firstScene);
+        });
+
+        // Criando layout para o segundo frame
+        VBox waitFrame = new VBox(10);
+        waitFrame.setAlignment(Pos.CENTER);
+        waitFrame.getChildren().addAll(new Label("Campo Minado!"), jogarButton, configButton, rankingButton, backButton);
+
+        primaryStage.setScene(new Scene(waitFrame, 300, 200));
+    }
+
 
     public static void openWindow() {
         new Thread(() -> launch(Graphics.class)).start(); // Iniciado como uma função à parte!!!
@@ -44,3 +95,4 @@ public class Graphics extends Application {
         launch(args);
     }
 }
+
