@@ -148,5 +148,13 @@ acredito que o jogo em sí... já foi.
 
 backing
 
+1656
+
+backing again.
+
+1830
+
+Vou de modo maluko msm.
+
 
 <!--- Eraser file: https://app.eraser.io/workspace/39N9EaMfzypA4hiNoDwB --->
