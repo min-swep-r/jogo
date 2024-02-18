@@ -1,4 +1,4 @@
-import java.awt.Color;
+import java.awt.Color; //era pra aqui star on
 import java.util.Scanner;
 import Suplement.Suply;
 public class Promptar {
