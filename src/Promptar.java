@@ -80,6 +80,13 @@ public class Promptar {
             scouting(jg);
             Suply.pause(1);
             return true;
+        } else if (var == 'm') {
+            System.out.println("check");
+            //método de escavar
+            boolean teste = jg.getMalukice();
+            System.out.println("loucura is: " + teste);
+            Suply.pause(1);
+            return true;
         } else {
             // Lógica para outras teclas, se necessário
             System.out.println("Tecla não reconhecida.");
