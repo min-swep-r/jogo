@@ -48,6 +48,7 @@ public class Jogo {
             if (jg.getMalukice()){
                 System.out.println("\nOlha a malukice...\n");
                 mudarBomba(jg);
+
             }
 
             if (jg.todasCelulasEscavadas()) {
@@ -137,7 +138,7 @@ public class Jogo {
 
     public void mudarBomba(Jogo jg) {
         Random random = new Random();
-        int chance = random.nextInt(2); // pra gerar um número aleatório entre 0 e 1 (inclusive)
+        int chance = random.nextInt(9); // pra gerar um número aleatório entre 0 e 1 (inclusive)
         if (chance == 0) {
             System.out.println("A Malukice começou");
 
@@ -169,6 +170,8 @@ public class Jogo {
                 jg.tableObj.getMinaFull(celulaBombaBandeira[0], celulaBombaBandeira[1]).changeBomba(false);
 
                 System.out.println("\nUma bomba marcada foi mudada de lugar!\n");
+
+                jg.tableObj.atualizaAposLoucura(jg);
             } else {
                 System.out.println("\nMalukice não deu certo\n"); //Não há células não reveladas ou células com bomba e bandeira para mudar.
             }
