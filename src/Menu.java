@@ -156,7 +156,6 @@ public class Menu {
                 break;
         }
 
-        // Next lógica, caso precise
         scr.close();
     }
 }

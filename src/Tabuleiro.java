@@ -1,4 +1,9 @@
 import java.util.Random; //importado com atalho alt+shift+ ENTER
+import java.io.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 
 public class Tabuleiro {
     // Atributos
@@ -81,6 +86,46 @@ public class Tabuleiro {
                     }
                 }
             }
+        }
+    }
+
+    public void zeraSide(Jogo jg) {
+        for (int i = 0; i < jg.getTamXObj(); i++) {
+            for (int j = 0; j < jg.getTamYObj(); j++) {
+                jg.tableObj.minas[i][j].setSide(0);
+            }
+        }
+    }
+
+
+    public void atualizaAposLoucura(Jogo jg) {
+        // Zera o atributo minaAoRedor de todas as células do tabuleiro
+        jg.tableObj.zeraSide(jg);
+
+        // Lista para armazenar coordenadas com bombas
+        List<int[]> bombCoords = new ArrayList<>();
+
+        // Itera sobre todas as células do tabuleiro para encontrar as coordenadas com bombas
+        for (int i = 0; i < jg.tableObj.minas.length; i++) {
+            for (int j = 0; j < jg.tableObj.minas[0].length; j++) {
+                if (jg.tableObj.minas[i][j].minaAqui) {
+                    bombCoords.add(new int[]{i, j});
+                }
+            }
+        }
+
+        // Zera o atributo minaAoRedor de todas as células do tabuleiro
+        for (int[] coord : bombCoords) {
+            int linha = coord[0];
+            int coluna = coord[1];
+            jg.tableObj.minas[linha][coluna].setSide(0);
+        }
+
+        // Atualiza as células vizinhas das novas bombas
+        for (int[] coord : bombCoords) {
+            int linha = coord[0];
+            int coluna = coord[1];
+            jg.tableObj.atualizarMinasAoRedor(linha, coluna);
         }
     }
 

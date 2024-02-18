@@ -56,6 +56,7 @@ public class Celula {
 
     public void putSide(){this.minaAoRedor++;}
     public int getSide(){return this.minaAoRedor;}
+    public void setSide(int newSet) {this.minaAoRedor = newSet;}
 
     public void changeBomba(boolean newState){this.minaAqui = newState;}
 }
