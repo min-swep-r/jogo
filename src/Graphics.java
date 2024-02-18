@@ -241,7 +241,7 @@ public class Graphics extends Application {
         }
 
         // Instanciando o jogo com os parâmetros configurados
-        Jogo jg = new Jogo(new Tabuleiro(tamMatrix, tamMatrix, numBombas), new User(this.stateDificuldade == 1 ? "Default Fácil" : this.stateDificuldade == 2 ? "Default Intermediário" : this.stateDificuldade == 3 ? "Default Difícil" : this.stateDificuldade == 4 ? "Default Maluko" : "No one"/*um ternário de 2 options, pra... definir o nome*/), tamMatrix, tamMatrix, this.stateDificuldade == 4 ? true : false);
+        JogoGUI jg = new JogoGUI(new Tabuleiro(tamMatrix, tamMatrix, numBombas), new User(this.stateDificuldade == 1 ? "Default Fácil" : this.stateDificuldade == 2 ? "Default Intermediário" : this.stateDificuldade == 3 ? "Default Difícil" : this.stateDificuldade == 4 ? "Default Maluko" : "No one"/*um ternário de 2 options, pra... definir o nome*/), tamMatrix, tamMatrix, this.stateDificuldade == 4 ? true : false);
         jg.iniciaJogo(jg);
     }
 
