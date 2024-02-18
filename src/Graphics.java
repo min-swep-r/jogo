@@ -12,6 +12,11 @@ import javafx.scene.layout.StackPane;
 
 import javafx.scene.image.Image;
 
+import java.io.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 //não focar somente nos graphs, mas pegar a manha.
 public class Graphics extends Application {
 
@@ -53,26 +58,25 @@ public class Graphics extends Application {
     }
 
     private void segundoFrame(Stage primaryStage, Scene firstScene) {
-        // Criando botão "Voltar"
+
+        //botões e ações
 
         Button jogarButton = new Button("Jogar");
-        Button configButton = new Button("Config");
-        Button rankingButton = new Button("Ranking");
-        Button backButton = new Button("Voltar");
-
         jogarButton.setOnAction(e -> {
-            // Implemente aqui a ação desejada ao clicar em "Jogar"
+            //nesse espaço, aparentemente, vc pode dizer qual a função de chamada do buton
         });
 
+        Button configButton = new Button("Config");
         configButton.setOnAction(e -> {
-            // Implemente aqui a ação desejada ao clicar em "Config"
+            // Impl
         });
 
+        Button rankingButton = new Button("Ranking");
         rankingButton.setOnAction(e -> {
-            // Implemente aqui a ação desejada ao clicar em "Ranking"
+            exibirRanking(primaryStage, firstScene);
         });
 
-
+        Button backButton = new Button("Voltar");
         backButton.setOnAction(e -> {
             // Volta para o primeiro frame
             primaryStage.setScene(firstScene);
@@ -87,6 +91,48 @@ public class Graphics extends Application {
     }
 
 
+    private void exibirRanking(Stage primaryStage, Scene firstScene) {
+        // Criando um layout para exibir o ranking
+        VBox rankingLayout = new VBox(10);
+        rankingLayout.setAlignment(Pos.CENTER);
+        rankingLayout.setStyle("-fx-background-color: #FFC0CB;"); // Definindo o background como vermelho
+
+        //----------------------------
+        // Definindo as dimensões da cena do ranking
+        Scene rankingScene = new Scene(rankingLayout, 300, 400); // Aumentando a altura para 400 pixels
+
+        // Adicionando um título ao layout
+        Label titleLabel = new Label("Top 10 do Ranking:");
+        rankingLayout.getChildren().add(titleLabel);
+        //----------------------------
+
+
+        // Obtendo os registros do ranking
+        List<RegistroRanking> registros = Ranking.lerRanking();
+
+        // Exibindo os registros no layout
+        for (int i = 0; i < Math.min(registros.size(), 10); i++) {
+            RegistroRanking registro = registros.get(i);
+            Label recordLabel = new Label((i + 1) + ". " + registro.getNomeUsuario() + " - " + registro.getNumeroJogadas() + " jogadas");
+            rankingLayout.getChildren().add(recordLabel);
+        }
+
+        // Criando um botão "Voltar"
+        Button backButton = new Button("Voltar");
+        backButton.setOnAction(event -> {
+            // Volta para a segunda cena (primeira cena do segundo frame)
+            segundoFrame(primaryStage, firstScene); // Passando a primeira cena do segundo frame como parâmetro
+        });
+        rankingLayout.getChildren().add(backButton);
+
+        // Configurando a cena atual para exibir o ranking
+        primaryStage.setScene(rankingScene);
+    }
+
+
+
+
+    // Chamada ------------------------------------------------------------------------------------------------------------------------
     public static void openWindow() {
         new Thread(() -> launch(Graphics.class)).start(); // Iniciado como uma função à parte!!!
     }

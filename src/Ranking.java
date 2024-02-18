@@ -31,7 +31,7 @@ public class Ranking {
         }
     }
 
-    private List<RegistroRanking> lerRanking() {
+    public static List<RegistroRanking> lerRanking() {
         List<RegistroRanking> ranking = new ArrayList<>();
 
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader("ranking.txt"))) {
