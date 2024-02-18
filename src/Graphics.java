@@ -23,6 +23,7 @@ import javafx.util.Duration;
 
 
 
+
 //não focar somente nos graphs, mas pegar a manha.
 public class Graphics extends Application {
 
@@ -245,7 +246,41 @@ public class Graphics extends Application {
         jg.iniciaJogo(jg);
     }
 
+    // Exibição ------------------------------------------------------------------------------------------------------------------------
 
+    public static void printButtonMatrix(Jogo jg) {
+        System.out.println("Imprimindo matriz de botões:");
+
+        // Itera sobre todas as células do tabuleiro
+        for (int i = 0; i < jg.getTamXObj(); i++) {
+            for (int j = 0; j < jg.getTamYObj(); j++) {
+                // Acessa a célula atual
+                Celula celula = jg.tableObj.getMinaFull(i, j);
+                Button button = new Button();
+
+                // Configura o texto do botão de acordo com o status da célula
+                if (celula.getBaneira()) { // Se tiver bandeira
+                    button.setText("P");
+                } else if (celula.celRevelado()) { // Se já tiver sido revelada
+                    if (celula.getRevelado()) { // Se tiver bomba
+                        button.setText("X");
+                    } else if (celula.getSide() > 0) { // Se tiver número de bombas ao redor
+                        button.setText(Integer.toString(celula.getSide()));
+                    } else { // Se for vazia
+                        button.setText(".");
+                    }
+                } else { // Se não tiver sido revelada
+                    button.setText("\u25A1");
+                }
+
+                // Adiciona o botão à matriz
+                // Aqui você pode adicionar o botão à sua interface gráfica ou apenas imprimir na tela
+                // Exemplo de como imprimir na tela:
+                System.out.print(button.getText() + " ");
+            }
+            System.out.println(); // Nova linha para a próxima linha do tabuleiro
+        }
+    }
     // Chamada ------------------------------------------------------------------------------------------------------------------------
     public static void openWindow() {
         new Thread(() -> launch(Graphics.class)).start(); // Iniciado como uma função à parte!!!
