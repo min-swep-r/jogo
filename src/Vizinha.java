@@ -3,7 +3,7 @@ public class Vizinha extends Celula {
 
     //construtor
     public Vizinha() {
-        super(); // Chama o construtor da classe pai (Celula)
+        super(); // Chama o construtor da classe pai
         this.minaAoRedor = 0;
     }
 

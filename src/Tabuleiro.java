@@ -32,7 +32,7 @@ public class Tabuleiro {
 
     // Métodos
     public void iniciaTab() {
-        // Implementação do método
+        // Impl do método
     }
 
     // Método para lidar com o clique do usuário em uma célula
@@ -114,11 +114,11 @@ public class Tabuleiro {
             }
         }
 
-        // Zera o atributo minaAoRedor de todas as células do tabuleiro
+
         for (int[] coord : bombCoords) {
             int linha = coord[0];
             int coluna = coord[1];
-            jg.tableObj.minas[linha][coluna].setSide(0);
+            jg.tableObj.minas[linha][coluna].setSide(0); // Zera o atributo minaAoRedor de todas as células do tabuleiro
         }
 
         // Atualiza as células vizinhas das novas bombas

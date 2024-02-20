@@ -49,7 +49,7 @@ public class Promptar {
             Suply.pause(2.65);
             return true;
         } else if (var == 'e') {
-            System.out.println("escavando...");
+//            System.out.println("escavando...");
             //método de escavar
 
             System.out.print("Digite a linha: ");
@@ -61,7 +61,7 @@ public class Promptar {
             int result = escava(linha, coluna, jg);
 
             if (result == 2) {
-            System.out.println("indo escavar as prox!");
+//            System.out.println("indo escavar as prox!");
             revelaSides(linha, coluna, jg);
             Suply.pause(1);
             return true;
@@ -150,7 +150,7 @@ public class Promptar {
         } else {
             if (celula != null) {
                 celula.revelaCelula();
-                System.out.println("Célula escavada!");
+//                System.out.println("Célula escavada!");
                 return 2;
 
             } else {
@@ -163,7 +163,7 @@ public class Promptar {
     }
 
     public static void revelaSides(int linha, int coluna, Jogo jg) {
-        System.out.println("CHegou pra escavar");
+//        System.out.println("CHegou pra escavar");
         for (int i = linha - 1; i <= linha + 1; i++) {
             for (int j = coluna - 1; j <= coluna + 1; j++) {
                 // Verifica se as coordenadas estão dentro dos limites do tabuleiro
@@ -232,15 +232,15 @@ public class Promptar {
     public static void legenda(){
         System.out.println("\n'.' = escavado, '\u25A1' = escavável, 'X' = Bomba, 'P' = Bandeira");
         System.out.println("\n\nPara jogar");
-        System.out.println("\t marcar");
-        System.out.println("\t(e)scavar");
-        System.out.println("\t(b)andeiar / dedsbandeirar");
+//        System.out.println("\t marcar");
+        System.out.println("\t(e)scavar (+ Coordenadas)");
+        System.out.println("\t(b)andeiar / dedsbandeirar (+ Coordenadas)");
         System.out.println("\t(s)air - do game");
-        System.out.println("\n\nPara Debug");
-        System.out.println("\t(a)ss - get assinatura User");
-        System.out.println("\t(p)rint - printa matriz de mina - troca estado da celula (ativa / desativa)");
-        System.out.println("\t(o)ut -  get mina");
-        System.out.println("\t(i)nput - set mina");
+//        System.out.println("\n\nPara Debug");
+//        System.out.println("\t(a)ss - get assinatura User");
+//        System.out.println("\t(p)rint - printa matriz de mina - troca estado da celula (ativa / desativa)");
+//        System.out.println("\t(o)ut -  get mina");
+//        System.out.println("\t(i)nput - set mina");
     }
     // Vou começar a mexer na exibição aqui. 1º - tudo tem que ser quadrado, a não ser que eu tenha escavado
     public static void printMina(Jogo jg) {
@@ -299,7 +299,7 @@ public class Promptar {
 
 
     public static void printMinaDebug(Jogo jg) {
-        System.out.println("estás tapaceano?");
+//        System.out.println("estás tapaceano?");
 
         for (int i = 0; i < jg.getTamXObj(); i++) {
             for (int j = 0; j < jg.getTamYObj(); j++) {
