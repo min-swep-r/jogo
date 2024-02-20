@@ -156,5 +156,12 @@ backing again.
 
 Vou de modo maluko msm.
 
+## 2024-02-19
+2215
+
+fds passou e não consegui implementar graficamente. vou fazer os ultimos ajustes.
+
+
+
 
 <!--- Eraser file: https://app.eraser.io/workspace/39N9EaMfzypA4hiNoDwB --->
