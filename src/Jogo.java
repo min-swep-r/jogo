@@ -138,7 +138,7 @@ public class Jogo {
 
     public void mudarBomba(Jogo jg) {
         Random random = new Random();
-        int chance = random.nextInt(9); // pra gerar um número aleatório entre 0 e 1 (inclusive)
+        int chance = random.nextInt(4); // pra gerar um número aleatório (prob de 1/n) (inclusive)
         if (chance == 0) {
             System.out.println("A Malukice começou");
 

@@ -242,7 +242,8 @@ public class Graphics extends Application {
                 numBombas = 10;
                 break;
             default:
-                // Lógica para outras dificuldades, se necessário
+                tamMatrix = 5;
+                numBombas = 5;
                 break;
         }
 
@@ -257,8 +258,6 @@ public class Graphics extends Application {
         // Criar uma nova janela
 
         System.out.println("Jogo iniciado na GUI");
-
-
         Stage primaryStage = new Stage();
         primaryStage.setTitle("Jogo");
 
@@ -286,7 +285,7 @@ public class Graphics extends Application {
                         button.setText(".");
                     }
                 } else { // Se não tiver sido revelada
-                    button.setText("\u25A1");
+                    button.setText(" ");
                 }
 
                 // Adicionar o botão à grade na posição (i, j)

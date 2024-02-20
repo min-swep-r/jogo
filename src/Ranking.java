@@ -9,7 +9,7 @@ public class Ranking {
              PrintWriter printWriter = new PrintWriter(fileWriter)) {
             printWriter.println(nomeUsuario + "," + numeroJogadas);
         } catch (IOException e) {
-            System.out.println("Erro ao salvar o ranking: " + e.getMessage());
+            System.out.println("Erro ao salvar o ranking: " + e.getMessage()); //Looppara não dar o erro
         }
     }
 

@@ -15,7 +15,7 @@ public class Celula {
         this.minaAoRedor = 0;
     }
 
-    // Métodos, getters e setters podem ser adicionados conforme necessário
+    // Métodos, getters e setters podem serão adicionados conforme necessário
 
     // Método para revelar a célula
 
@@ -35,9 +35,9 @@ public class Celula {
     public boolean temCelula() {return isCelula;} //Standard (todas)
 
     public boolean revelaCelula() {
-        System.out.println("Antes era: "+ this.minaRevelada);
+//        System.out.println("Antes era: "+ this.minaRevelada);
         this.minaRevelada = true;
-        System.out.println("agora é: "+ this.minaRevelada);
+//        System.out.println("agora é: "+ this.minaRevelada);
         return minaRevelada;
     } //Standard (todas)
 
@@ -48,9 +48,9 @@ public class Celula {
     } //standard (todas)
     public boolean mudaBandeira() {
         //troca o estado
-        System.out.println("antes a bandeira tava: "+ this.minaMarcada);
+//        System.out.println("antes a bandeira tava: "+ this.minaMarcada);
         if (minaMarcada){this.minaMarcada = false;} else {this.minaMarcada = true;} //this.atibuto quer dizer "atributo do objeto itself. não de outro objeto"
-        System.out.println("agora a baneira é: "+ this.minaMarcada);
+//        System.out.println("agora a baneira é: "+ this.minaMarcada);
         return minaRevelada;
     } //Standard (todas)
 
