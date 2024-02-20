@@ -10,7 +10,7 @@ Roteiro: [﻿AQUI!!!](https://drive.google.com/file/d/1JilxkVmk3AX6HuuT0fsHob_Fm
 
 
 ### Primeiro diagrama:
-![Figure 1](/.eraser/eBwPst8QmxllTjqJEaFD___ibsr7NFOmZXGn92bwac608CiSpo2___---figure---DovaXzgRUWWLdmEC7MxZ1---figure---x6unebMDUbX_A9iBRd3dxQ.png "Figure 1")
+![Figure 1](/.eraser/eBwPst8QmxllTjqJEaFD___ibsr7NFOmZXGn92bwac608CiSpo2___---figure---VltFAItG5mstZWvJjcbRJ---figure---x6unebMDUbX_A9iBRd3dxQ.png "Figure 1")
 
 
 
