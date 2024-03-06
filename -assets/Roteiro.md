@@ -17,7 +17,7 @@ Vou dar uma implementada no I/O, para ficar melhor exibido.
 > Não sei se era o mais correto, mas antes de implementar a herança e o POO no jogo, resolvi deixar o jogo... Jogável!
 
 - [x] Projeto: considerando que uma célula pode ser bomba, vizinha a bomba ou espaço vazio, expanda a classe utilizada para representar cada célula do tabuleiro utilizando o conceito de herança. 
-![Figure 1](/.eraser/r0Ycd1dM9fH9k5vtRZ8n___ibsr7NFOmZXGn92bwac608CiSpo2___---figure---rIBjR8FQj2VwXViCBVoVc---figure---E1WrAk5PUvAwcqRu-Y96AQ.png "Figure 1")
+![Figure 1](/.eraser/r0Ycd1dM9fH9k5vtRZ8n___ibsr7NFOmZXGn92bwac608CiSpo2___---figure---GHUcNdqUIYL6vB42VEpBV---figure---E1WrAk5PUvAwcqRu-Y96AQ.png "Figure 1")
 
 > Certo, acho que aqui está realmente dificil pra implementar.
 
@@ -27,25 +27,25 @@ Vou dar uma implementada no I/O, para ficar melhor exibido.
 
 - [x] Projeto: ao abrir uma célula que não tem bomba na vizinhança, todas suas células vizinhas devem ser abertas de maneira sucessiva. 
 - [x] Projeto: Implemente o código do diagrama atualizado que seja necessário para que 2 usuários consigam interagir. 
-- [ ] Projeto: separe as classes do jogo em pacotes (ao menos dois) 
-- [ ] Projeto: revise o código e verifique o nível de encapsulamento de cada classe e se as boas práticas estão sendo respeitadas.
+- [x] Projeto: separe as classes do jogo em pacotes (ao menos dois) 
+- [x] Projeto: revise o código e verifique o nível de encapsulamento de cada classe e se as boas práticas estão sendo respeitadas.
 ---
 
 ### CHECKPOINT 3 –
-- [ ] Projeto: crie uma alternativa ao Campo Minado chamada Campo Minado Maluco. Em Campo Minado Maluco, uma célula pode ser ou não maluca. Quando a célula for maluca, o jogador ao marcar a célula como bomba colocando uma bandeira, a célula poderá alterar seu status de bomba com uma probabilidade determinada pelo nível de maluquice do jogo.
+- [x] Projeto: crie uma alternativa ao Campo Minado chamada Campo Minado Maluco. Em Campo Minado Maluco, uma célula pode ser ou não maluca. Quando a célula for maluca, o jogador ao marcar a célula como bomba colocando uma bandeira, a célula poderá alterar seu status de bomba com uma probabilidade determinada pelo nível de maluquice do jogo.
  Obs: pense em alguma estratégia para que os vizinhos da célula maluca sejam devidamente notificados para quando abertos exibirem corretamente o número de bombas ao seu redor caso a célula maluca tenha seu status de bomba alterado.
 - [ ] Projeto: identifique quais classes podem ser abstratas e faça a devida alteração. 
 - [ ] Projeto: adicione uma interface para aumentar o desacoplamento da classe que representa o tabuleiro da classe que representa o jogo. 
-- [ ] Projeto: inclua uma classe que represente uma exceção de valor de atributo inválido. Esta classe deve ser capaz de receber em seu construtor uma String que represente uma mensagem associada à situação de exceção eventualmente ocorrida. 
-- [ ] Projeto: identifique exceções para cada método set ao verificar se o valor passado para preenchimento é aceitável, e outras possíveis exceções do jogo. 
-- [ ] Projeto: Atualize o diagrama de classes considerando diferentes tamanhos de tabuleiro e quantidade de bombas para os níveis inicial, intermediário e difícil. 
-- [ ] Projeto: Implemente o diagrama completo dando o tratamento adequado para conseguir o comportamento esperado.
+- [ ] Projeto: inclua uma classe que represente uma exceção de valor de atributo inválido. Esta classe deve ser capaz de receber em seu construtor uma String que represente uma mensagem associada à situação de exceção eventualmente ocorrida. - INCOMPLETO
+- [x] Projeto: identifique exceções para cada método set ao verificar se o valor passado para preenchimento é aceitável, e outras possíveis exceções do jogo. 
+- [x] Projeto: Atualize o diagrama de classes considerando diferentes tamanhos de tabuleiro e quantidade de bombas para os níveis inicial, intermediário e difícil. 
+- [x] Projeto: Implemente o diagrama completo dando o tratamento adequado para conseguir o comportamento esperado.
 ### 
 ---
 
 ### CHECKPOINT 4 – Final Breakthroug
-- [ ] Projeto: implemente a informação de recorde do jogo exibindo pelo menos os 10 maiores vencedores. 
-- [ ] Projeto: implemente a interface gráfica do jogo.
+- [x] Projeto: implemente a informação de recorde do jogo exibindo pelo menos os 10 maiores vencedores. 
+- [ ] Projeto: implemente a interface gráfica do jogo. - INCOMPLETO
 ---
 
 
